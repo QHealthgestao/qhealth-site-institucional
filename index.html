@@ -120,7 +120,71 @@
   .feature h3{font:800 clamp(15px,1.08vw,18px)/1.27 Manrope,Arial,sans-serif;letter-spacing:-.032em;color:#102637;margin:0 0 12px}
   .feature p{font-size:clamp(12px,.95vw,14px);color:#526d7b;line-height:1.65;margin:0}
   .feature-tag{margin-top:auto;padding-top:16px;color:#087f73;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.055em}
-  .bridge{display:grid;grid-template-columns:.77fr 1.23fr;gap:45px;align-items:center;margin-top:0;background:#062732;padding:42px;border-radius:17px;color:white;position:relative;overflow:hidden}.bridge:after{content:'';position:absolute;width:240px;height:240px;border:1px solid rgba(36,204,170,.28);border-radius:50%;right:-95px;top:-140px;pointer-events:none}.bridge .eyebrow{color:#73e0b9}.bridge h3{font:800 29px/1.18 Manrope,Arial,sans-serif;letter-spacing:-.05em;margin:14px 0}.bridge p{font-size:13px;color:#a8c9c9;line-height:1.75;margin:0}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;position:relative}.step{padding:16px 9px;border:1px solid rgba(145,232,215,.22);border-radius:9px;background:rgba(255,255,255,.04);text-align:center;font-size:10px;font-weight:700;color:#d0e7e7}.step svg{width:20px;height:20px;margin:0 auto 9px;display:block;color:#73dfbb}.step b{display:block;font-size:10px;line-height:1.45}
+  /* QHealth Software: seção comercial de produto com a captura real intacta. */
+  .software-section:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.15;background-image:linear-gradient(rgba(96,210,205,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(96,210,205,.18) 1px,transparent 1px);background-size:60px 60px;z-index:-1}
+  .software-section>.container{position:relative;width:min(1510px,calc(100% - 64px))}
+  .software-stage{display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);gap:clamp(28px,3.6vw,61px);align-items:center}
+  .software-message{min-width:0}
+  .software-message .eyebrow{color:#75e6c5;font-size:11px}
+  .software-message h2{font:800 clamp(2.25rem,3.4vw,3.65rem)/1.10 Manrope,Arial,sans-serif;letter-spacing:-.058em;max-width:610px;margin:17px 0 17px}
+  .software-message .gradient-text{background:linear-gradient(100deg,#68dfaa,#40cfca 55%,#65b9f1);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .software-lead{font-size:clamp(14px,1.05vw,16px);line-height:1.65;color:#b8d0d6;max-width:550px;margin:0}
+  .software-value{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 17px;list-style:none;padding:0;margin:21px 0 23px;max-width:535px}
+  .software-value li{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;line-height:1.4;color:#deefef}
+  .software-value .icon{width:16px;height:16px;color:#5de1ad}
+  .software-actions{display:flex;align-items:center;flex-wrap:wrap;gap:13px}
+  .software-actions .btn{padding:14px 18px}
+  .software-actions .software-secondary{font-size:12px;font-weight:800;color:#8be3d3;display:inline-flex;align-items:center;gap:7px}
+  .software-actions .software-secondary:hover{text-decoration:underline}
+  .software-demo{margin:0;min-width:0}
+  .software-frame{border-radius:19px;border:1px solid rgba(96,224,210,.55);padding:7px;background:#092630;box-shadow:0 24px 70px rgba(0,0,0,.45),0 0 0 8px rgba(60,218,194,.055);overflow:hidden}
+  .software-frame-head{height:30px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 10px 6px;font-size:9px;letter-spacing:.09em;font-weight:800;color:#b3d6da}
+  .software-frame-dots{display:flex;align-items:center;gap:5px}
+  .software-frame-dots i{width:7px;height:7px;border-radius:50%;background:#db928c}
+  .software-frame-dots i:nth-child(2){background:#e4bf85}
+  .software-frame-dots i:nth-child(3){background:#79c8a0}
+  .software-frame-status{display:flex;align-items:center;gap:6px;color:#8ce6c7}
+  .software-frame-status:before{content:"";width:6px;height:6px;border-radius:50%;background:#5de1ad}
+  .software-frame img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;background:#061b26}
+  .software-demo figcaption{text-align:center;color:#9eced0;font-size:11px;font-weight:700;margin-top:12px;letter-spacing:.01em}
+  .software-journey{margin-top:clamp(23px,3.3svh,34px);background:rgba(4,28,39,.7);border:1px solid rgba(105,219,204,.24);border-radius:16px;padding:17px 24px}
+  .software-journey-heading{margin:0 0 11px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#82dcca;font-weight:800}
+  .software-flow{display:flex;list-style:none;padding:0;margin:0;align-items:center;gap:20px}
+  .software-flow li{display:flex;align-items:center;gap:11px;min-width:0;flex:1;position:relative;font-size:clamp(12px,1vw,15px);font-weight:800;white-space:nowrap}
+  .software-flow li:not(:last-child):after{content:"→";position:absolute;right:-14px;color:#5ecab6;font-size:19px;font-weight:400}
+  .software-flow .icon{width:23px;height:23px;color:#5ee0b2}
+  @media(max-width:1160px) and (min-width:901px){
+    .software-stage{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px}
+    .software-message h2{font-size:clamp(2rem,3.2vw,2.8rem)}
+    .software-value{gap:7px 10px}
+    .software-flow{gap:15px}
+    .software-flow li{gap:6px;font-size:12px}
+    .software-flow li:not(:last-child):after{right:-11px}
+  }
+  @media(max-width:900px){
+    .software-section{display:block;min-height:auto;padding:62px 0}
+    .software-stage{grid-template-columns:1fr;gap:35px}
+    .software-message h2{max-width:750px}
+    .software-lead{max-width:680px}
+    .software-demo{max-width:770px;margin-inline:auto}
+    .software-journey{margin-top:27px}
+  }
+  @media(max-width:600px){
+    .software-section{padding:50px 0}
+    .software-section>.container{width:calc(100% - 34px)}
+    .software-message h2{font-size:clamp(2rem,8.2vw,3rem)}
+    .software-value{grid-template-columns:1fr}
+    .software-actions{align-items:stretch}
+    .software-actions .btn{width:100%}
+    .software-stage{gap:27px}
+    .software-frame{padding:4px;border-radius:12px}
+    .software-frame-head{height:23px;font-size:7px;padding:0 5px 3px}
+    .software-demo figcaption{font-size:10px}
+    .software-journey{padding:18px}
+    .software-flow{flex-wrap:wrap;gap:15px 8px}
+    .software-flow li{flex:none;width:calc(50% - 4px);white-space:normal;font-size:12px;gap:8px}
+    .software-flow li:not(:last-child):after{content:none}
+  }
   .software-section{display:flex;align-items:center;min-height:calc(100svh - 90px);background:#fff}
   /* Focus */
   .focus{background:#fff;min-height:calc(100svh - 90px);display:flex;align-items:center}.focus-layout{display:grid;grid-template-columns:.84fr 1.16fr;gap:80px;align-items:center}.focus .section-title{font-size:clamp(2rem,3vw,3rem)}.focus-list{margin-top:30px;display:grid;gap:16px}.focus-list-item{display:flex;gap:14px;align-items:flex-start}.focus-list-item .mark{background:#e7f9f3;color:#069e80;border-radius:9px;padding:9px;display:grid;place-items:center}.focus-list-item b{display:block;font-size:13px;margin:1px 0 5px}.focus-list-item p{font-size:12px;color:#677f89;line-height:1.6;margin:0}
@@ -136,9 +200,9 @@
   /* prototype modal */
   dialog{max-width:min(500px,calc(100vw - 32px));border:1px solid #d6e9e8;background:#fff;border-radius:15px;padding:29px;box-shadow:0 20px 70px rgba(0,0,0,.32);color:#132e3a}dialog::backdrop{background:rgba(2,16,24,.7);backdrop-filter:blur(3px)}dialog h2{font:800 22px Manrope,sans-serif;letter-spacing:-.04em;margin:0 0 9px}dialog p{font-size:13px;line-height:1.65;color:#607886}dialog .close-modal{position:absolute;right:13px;top:11px;border:0;background:#eaf4f2;border-radius:8px;width:31px;height:31px;color:#153e43;display:grid;place-items:center}dialog .field{display:grid;gap:5px;margin-top:13px}dialog label{font-size:11px;font-weight:800}dialog input,dialog textarea{border:1px solid #c9dfe1;border-radius:8px;padding:12px;width:100%;outline:none;font-size:13px}dialog input:focus,dialog textarea:focus{border-color:#2bbf9a;box-shadow:0 0 0 3px rgba(43,191,154,.1)}.modal-note{font-size:11px;color:#607d84;background:#eff7f6;padding:10px 12px;border-radius:7px;line-height:1.5;margin:13px 0}
   @media(max-width:900px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.capabilities{display:block;min-height:auto}.cap-top{display:block}.cap-top .section-lead{max-width:650px;margin-top:14px}}
-  @media(max-width:1050px){.menu{gap:15px}.hero-inner{grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);gap:32px}.float-card.one{right:-5px}.mock-body{grid-template-columns:95px 1fr}.stat-grid{gap:5px}.stat{padding:9px 7px}.focus-layout{gap:36px}.bridge{grid-template-columns:1fr;gap:20px}.steps{max-width:700px}.pillars{padding:24px}}
+  @media(max-width:1050px){.menu{gap:15px}.hero-inner{grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);gap:32px}.float-card.one{right:-5px}.mock-body{grid-template-columns:95px 1fr}.stat-grid{gap:5px}.stat{padding:9px 7px}.focus-layout{gap:36px}.pillars{padding:24px}}
   @media(max-width:850px){.ecosystem,.focus,.two-solutions,.software-section{display:block;min-height:0}.menu{position:absolute;top:75px;left:0;right:0;background:#09232e;border-bottom:1px solid rgba(255,255,255,.15);padding:18px 26px;flex-direction:column;align-items:stretch;gap:18px;display:none}.menu.open{display:flex}.menu-toggle{display:flex}.intro-viewport{display:block;min-height:auto}.hero{display:block;min-height:auto;padding:133px 0 65px}.hero-inner{grid-template-columns:1fr;gap:35px}.hero h1{max-width:760px}.showcase{max-width:610px;margin:0 auto;width:100%}.ecosystem-top,.cap-top{display:block}.ecosystem .section-lead{max-width:600px}.pillar-grid{grid-template-columns:1fr 1fr}.pillar:last-child{grid-column:1/-1;min-height:280px}.focus-layout{grid-template-columns:1fr}.governance-window{max-width:700px}.principles .container{grid-template-columns:repeat(2,1fr)}.contact-layout{grid-template-columns:1fr}.two-grid{gap:12px}}
-  @media(max-width:600px){.container{width:calc(100% - 34px)}.section{padding:54px 0}.hero{padding:125px 0 62px;min-height:auto}.hero h1{font-size:clamp(2.45rem,10.9vw,3.5rem)}.hero-sub{font-size:14px}.hero-actions{flex-direction:column;align-items:stretch}.hero-proof{margin-top:26px}.showcase{padding:18px 4px 10px}.app-preview{transform:none}.mock-body{grid-template-columns:75px 1fr;min-height:280px}.mock-sidebar{padding:10px 5px}.mock-logo{font-size:10px;margin:0 3px 15px}.side-item{padding:8px 4px;font-size:7px;gap:4px}.side-item .icon{width:10px;height:10px}.mock-main{padding:13px 9px}.mock-heading{font-size:14px}.mock-small{font-size:8px}.stat-grid{gap:3px}.stat{padding:8px 4px}.stat b{font-size:8px}.stat p{font-size:6px}.activity{gap:4px}.mock-card{padding:8px}.mock-card h4{font-size:8px}.activity-row{gap:4px}.activity-row .mini-circle{width:16px;height:16px}.activity-row b{font-size:7px}.activity-row em{font-size:6px}.float-card{font-size:9px;padding:8px}.float-card.one{right:0;top:-5px}.float-card.two{bottom:-12px;left:0}.float-card small{font-size:7px}.ticker .container{justify-content:start;gap:12px 24px}.ticker span{font-size:11px}.pillar-grid,.feature-grid,.two-grid{grid-template-columns:1fr}.pillar,.pillar:last-child{grid-column:auto;min-height:295px}.pillar-number{margin-bottom:0}.capabilities>.container{width:calc(100% - 34px)}.filters{gap:8px}.filter{padding:10px 15px;font-size:12px}.feature{min-height:225px;padding:20px}.feature .glyph{margin-bottom:14px}.section-title{font-size:clamp(2rem,8vw,2.8rem)}.feature{min-height:175px}.bridge{margin-top:40px;padding:26px 20px}.bridge h3{font-size:24px}.steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}.step{padding:10px 2px;font-size:8px}.step b{font-size:8px}.step .icon{width:16px;height:16px}.governance-window{padding:12px}.gov-row{gap:3px}.gov-row div{padding:8px 5px}.gov-row b{font-size:9px}.gov-row span{font-size:8px}.two-solutions{padding-bottom:73px}.deep-card{padding:29px;min-height:320px}.principles .container{grid-template-columns:1fr 1fr;gap:20px}.principle{padding-left:12px}.contact{padding:76px 0}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions .btn{justify-content:center}footer .container{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.brand{font-size:23px}}
+  @media(max-width:600px){.container{width:calc(100% - 34px)}.section{padding:54px 0}.hero{padding:125px 0 62px;min-height:auto}.hero h1{font-size:clamp(2.45rem,10.9vw,3.5rem)}.hero-sub{font-size:14px}.hero-actions{flex-direction:column;align-items:stretch}.hero-proof{margin-top:26px}.showcase{padding:18px 4px 10px}.app-preview{transform:none}.mock-body{grid-template-columns:75px 1fr;min-height:280px}.mock-sidebar{padding:10px 5px}.mock-logo{font-size:10px;margin:0 3px 15px}.side-item{padding:8px 4px;font-size:7px;gap:4px}.side-item .icon{width:10px;height:10px}.mock-main{padding:13px 9px}.mock-heading{font-size:14px}.mock-small{font-size:8px}.stat-grid{gap:3px}.stat{padding:8px 4px}.stat b{font-size:8px}.stat p{font-size:6px}.activity{gap:4px}.mock-card{padding:8px}.mock-card h4{font-size:8px}.activity-row{gap:4px}.activity-row .mini-circle{width:16px;height:16px}.activity-row b{font-size:7px}.activity-row em{font-size:6px}.float-card{font-size:9px;padding:8px}.float-card.one{right:0;top:-5px}.float-card.two{bottom:-12px;left:0}.float-card small{font-size:7px}.ticker .container{justify-content:start;gap:12px 24px}.ticker span{font-size:11px}.pillar-grid,.feature-grid,.two-grid{grid-template-columns:1fr}.pillar,.pillar:last-child{grid-column:auto;min-height:295px}.pillar-number{margin-bottom:0}.capabilities>.container{width:calc(100% - 34px)}.filters{gap:8px}.filter{padding:10px 15px;font-size:12px}.feature{min-height:225px;padding:20px}.feature .glyph{margin-bottom:14px}.section-title{font-size:clamp(2rem,8vw,2.8rem)}.feature{min-height:175px}.governance-window{padding:12px}.gov-row{gap:3px}.gov-row div{padding:8px 5px}.gov-row b{font-size:9px}.gov-row span{font-size:8px}.two-solutions{padding-bottom:73px}.deep-card{padding:29px;min-height:320px}.principles .container{grid-template-columns:1fr 1fr;gap:20px}.principle{padding-left:12px}.contact{padding:76px 0}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions .btn{justify-content:center}footer .container{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.brand{font-size:23px}}
   @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
   /* Identidade institucional e imagem real integradas diretamente no layout. */
@@ -282,9 +346,48 @@
       </div>
     </div></section>
 
-    <section class="section software-section" id="software"><div class="container">
-      <div class="bridge"><div><span class="eyebrow">QHealth Software</span><h3>Do acontecimento à melhoria. <span class="gradient-text">Sem perder o contexto.</span></h3><p>Quando informação, evidência e ação se conectam, a gestão ganha continuidade. Esta é a jornada que queremos tornar visível.</p></div><div class="steps"><div class="step"><svg class="icon"><use href="#i-bell"/></svg><b>Notificar</b></div><div class="step"><svg class="icon"><use href="#i-risk"/></svg><b>Investigar</b></div><div class="step"><svg class="icon"><use href="#i-target"/></svg><b>Agir</b></div><div class="step"><svg class="icon"><use href="#i-check"/></svg><b>Verificar</b></div><div class="step"><svg class="icon"><use href="#i-chart"/></svg><b>Evoluir</b></div></div></div>
-    </div></section>
+    <section class="section software-section" id="software" aria-labelledby="software-heading">
+      <div class="container">
+        <div class="software-stage">
+          <div class="software-message">
+            <span class="eyebrow">QHealth Software · Tecnologia para a Qualidade</span>
+            <h2 id="software-heading">Da notificação à <span class="gradient-text">melhoria contínua.</span> Tudo em um só fluxo.</h2>
+            <p class="software-lead">Uma plataforma que conecta notificação, investigação, ações, acompanhamento e resultados. Informação organizada para fortalecer a governança, a segurança do paciente e a tomada de decisão.</p>
+            <ul class="software-value">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Gestão integrada</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Rastreabilidade das ações</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Evidências organizadas</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Qualidade e segurança</li>
+            </ul>
+            <div class="software-actions">
+              <a class="btn btn-primary" href="#contato">Solicitar uma apresentação <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="software-secondary" href="#diferenciais">Explorar funcionalidades <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+          <figure class="software-demo">
+            <div class="software-frame">
+              <div class="software-frame-head" aria-hidden="true">
+                <span class="software-frame-dots"><i></i><i></i><i></i></span>
+                <span>QHEALTH SOFTWARE</span>
+                <span class="software-frame-status">TELA REAL</span>
+              </div>
+              <img src="qhealth-gestao-riscos.png" width="1352" height="660" alt="Tela real do QHealth Software no módulo Gestão de Riscos, com mapa de riscos, indicadores e registro de riscos" loading="lazy" decoding="async">
+            </div>
+            <figcaption>Interface real do QHealth · Gestão de Riscos</figcaption>
+          </figure>
+        </div>
+        <div class="software-journey" aria-label="Etapas conectadas da melhoria contínua">
+          <p class="software-journey-heading">Da ocorrência ao resultado · Uma jornada conectada</p>
+          <ol class="software-flow">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg>Notificar</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-risk"/></svg>Investigar</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>Agir</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Verificar</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>Evoluir</li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
     <section class="section focus"><div class="container focus-layout"><div><span class="eyebrow">Governança é um diferencial</span><h2 class="section-title">Uma decisão tomada precisa se transformar em <span style="color:#099779">ação acompanhada.</span></h2><p class="section-lead">No QHealth, comissões e comitês não são apenas cadastros. O valor está em estruturar a rotina institucional e registrar o que acontece depois de cada reunião.</p>
       <div class="focus-list"><div class="focus-list-item"><div class="mark"><svg class="icon"><use href="#i-users"/></svg></div><div><b>Composição e organização</b><p>Membros, atribuições e histórico da governança institucional.</p></div></div><div class="focus-list-item"><div class="mark"><svg class="icon"><use href="#i-calendar"/></svg></div><div><b>Reuniões e atas</b><p>Registro de discussões, decisões e encaminhamentos.</p></div></div><div class="focus-list-item"><div class="mark"><svg class="icon"><use href="#i-check"/></svg></div><div><b>Responsáveis e acompanhamento</b><p>Visibilidade do que ficou acordado e precisa ser realizado.</p></div></div></div>
