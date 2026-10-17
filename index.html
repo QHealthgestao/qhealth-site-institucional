@@ -75,8 +75,30 @@
   .float-card{position:absolute;background:white;color:#163c48;display:flex;align-items:center;gap:10px;padding:12px 15px;border-radius:12px;box-shadow:0 17px 55px rgba(0,0,0,.21);border:1px solid #e8f1f1;font-size:11px;font-weight:800;animation:float 5.5s ease-in-out infinite}.float-card .icon{color:#15ab8b}.float-card small{display:block;font-size:9px;font-weight:600;color:#779098;margin-top:3px}.float-card.one{top:0;right:-22px}.float-card.two{bottom:-8px;left:-25px;animation-delay:-2s}@keyframes float{50%{transform:translateY(-7px)}}
   .ticker{background:#092630;color:#c0d7d9;padding:19px 0;border-top:1px solid rgba(255,255,255,.08)}.ticker .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}.ticker b{font-size:11px;font-weight:800;letter-spacing:.1em;color:#74e0be}.ticker span{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:700}.ticker svg{color:#4fd5ad;width:17px;height:17px}
   /* 3 pillars */
-  .ecosystem{background:#fff;min-height:calc(100svh - 90px);display:flex;align-items:center}.ecosystem-top{display:flex;justify-content:space-between;gap:30px;align-items:end}.ecosystem .section-title{max-width:640px}.ecosystem .section-lead{max-width:385px;margin-bottom:11px}
-  .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:24px}.pillar{border:1px solid #dce8e9;min-height:295px;border-radius:15px;padding:24px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:box-shadow .2s,transform .2s}.pillar:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.pillar:after{content:'';position:absolute;right:-65px;top:-75px;width:195px;height:195px;border-radius:50%;background:var(--shade);filter:blur(2px);opacity:.47}.pillar.software{--shade:#d6f7ee}.pillar.consult{--shade:#daeffa}.pillar.academy{--shade:#e1f5e3}.pillar-number{font-size:12px;font-weight:800;color:#849ca3;letter-spacing:.13em;margin-bottom:23px}.pillar-icon{width:51px;height:51px;border-radius:13px;background:#e7f8f4;color:#009d83;display:grid;place-items:center}.pillar.consult .pillar-icon{color:#257ebc;background:#eaf4fe}.pillar.academy .pillar-icon{color:#158b61;background:#e9f7e7}.pillar h3{font:800 23px Manrope,Arial,sans-serif;letter-spacing:-.05em;margin:19px 0 11px}.pillar p{color:#647987;line-height:1.7;font-size:13px;margin:0 0 23px}.pillar a{margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:#078973;font-size:12px;font-weight:800}
+  .ecosystem{background:#fff;min-height:calc(100svh - 90px);display:flex;align-items:center;padding-block:clamp(24px,4svh,42px)}
+  .ecosystem-top{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(280px,.95fr);align-items:center;gap:clamp(28px,4vw,64px)}
+  .ecosystem .section-title{max-width:880px;font-size:clamp(2.45rem,3.35vw,3.4rem);line-height:1.15;margin:15px 0 0;letter-spacing:-.052em}
+  .ecosystem .section-lead{max-width:465px;margin:16px 0 0;font-size:clamp(14px,1vw,16px);line-height:1.72;color:#506978}
+  .ecosystem .section-title .gradient-text{background:linear-gradient(103deg,#079f8b,#27b8ba 65%,#2482ca);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .pillar-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:29px}
+  .pillar{--card-accent:#0fae94;--shade:#d6f7ee;min-height:302px;border:1px solid #cbdfe2;border-radius:17px;padding:25px 26px;display:flex;flex-direction:column;position:relative;overflow:hidden;background:linear-gradient(160deg,#fff 15%,#f8fbfc 100%);box-shadow:0 12px 31px rgba(11,53,69,.075);transition:transform .2s,box-shadow .2s,border-color .2s}
+  .pillar:hover{transform:translateY(-3px);border-color:var(--card-accent);box-shadow:0 19px 42px rgba(11,53,69,.13)}
+  .pillar:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--card-accent)}
+  .pillar:after{content:"";position:absolute;right:-75px;top:-78px;width:220px;height:220px;border-radius:50%;background:var(--shade);filter:blur(1px);opacity:.48;pointer-events:none}
+  .pillar>*{position:relative;z-index:1}
+  .pillar.software{--shade:#d6f7ee;--card-accent:#0cae96}
+  .pillar.consult{--shade:#daeffa;--card-accent:#218bc4}
+  .pillar.academy{--shade:#e1f5e3;--card-accent:#26ad79}
+  .pillar-top{display:flex;align-items:center;gap:15px;margin-bottom:17px}
+  .pillar-number{font-size:11px;font-weight:800;color:#6b8794;letter-spacing:.13em;margin:0}
+  .pillar-icon{width:55px;height:55px;flex:none;border-radius:14px;background:#e2f7f0;color:#009d83;display:grid;place-items:center}
+  .pillar.consult .pillar-icon{color:#257ebc;background:#e5f1fc}
+  .pillar.academy .pillar-icon{color:#158b61;background:#e5f6e8}
+  .pillar h3{font:800 clamp(21px,1.45vw,25px)/1.18 Manrope,Arial,sans-serif;letter-spacing:-.048em;color:#102637;margin:0 0 11px}
+  .pillar p{color:#526d7b;line-height:1.63;font-size:14px;margin:0 0 20px}
+  .pillar a{margin-top:auto;display:inline-flex;align-items:center;gap:9px;color:#087d70;font-size:13px;font-weight:800;padding-top:12px;border-top:1px solid #dce8e9}
+  .pillar a:hover{color:#086eaf}
+  .pillar a .icon{width:17px;height:17px}
   /* Difference features */
   .capabilities{background:#f4f9fa;min-height:calc(100svh - 90px);display:flex;align-items:center;padding-block:12px}.cap-top{display:flex;justify-content:space-between;align-items:end;gap:30px}.cap-top .section-title{max-width:740px;font-size:clamp(2rem,3vw,2.75rem);margin:10px 0}
   .filters{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 12px}.filter{padding:11px 17px;border-radius:30px;border:1px solid #d6e7e6;background:#fff;color:#536c79;font-size:12px;font-weight:800;transition:.2s}.filter.active,.filter:hover{background:#0b3b3e;border-color:#0b3b3e;color:#edfffc}
@@ -102,7 +124,7 @@
   @media(min-width:901px) and (max-width:1199px){.capabilities .section-title{font-size:2rem}.feature{padding:12px;min-height:166px}}
   @media(max-width:1050px){.menu{gap:15px}.hero-inner{grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);gap:32px}.float-card.one{right:-5px}.mock-body{grid-template-columns:95px 1fr}.stat-grid{gap:5px}.stat{padding:9px 7px}.focus-layout{gap:36px}.bridge{grid-template-columns:1fr;gap:20px}.steps{max-width:700px}.pillars{padding:24px}}
   @media(max-width:850px){.ecosystem,.focus,.two-solutions,.software-section{display:block;min-height:0}.menu{position:absolute;top:75px;left:0;right:0;background:#09232e;border-bottom:1px solid rgba(255,255,255,.15);padding:18px 26px;flex-direction:column;align-items:stretch;gap:18px;display:none}.menu.open{display:flex}.menu-toggle{display:flex}.intro-viewport{display:block;min-height:auto}.hero{display:block;min-height:auto;padding:133px 0 65px}.hero-inner{grid-template-columns:1fr;gap:35px}.hero h1{max-width:760px}.showcase{max-width:610px;margin:0 auto;width:100%}.ecosystem-top,.cap-top{display:block}.ecosystem .section-lead{max-width:600px}.pillar-grid{grid-template-columns:1fr 1fr}.pillar:last-child{grid-column:1/-1;min-height:280px}.focus-layout{grid-template-columns:1fr}.governance-window{max-width:700px}.principles .container{grid-template-columns:repeat(2,1fr)}.contact-layout{grid-template-columns:1fr}.two-grid{gap:12px}}
-  @media(max-width:600px){.container{width:calc(100% - 34px)}.section{padding:54px 0}.hero{padding:125px 0 62px;min-height:auto}.hero h1{font-size:clamp(2.45rem,10.9vw,3.5rem)}.hero-sub{font-size:14px}.hero-actions{flex-direction:column;align-items:stretch}.hero-proof{margin-top:26px}.showcase{padding:18px 4px 10px}.app-preview{transform:none}.mock-body{grid-template-columns:75px 1fr;min-height:280px}.mock-sidebar{padding:10px 5px}.mock-logo{font-size:10px;margin:0 3px 15px}.side-item{padding:8px 4px;font-size:7px;gap:4px}.side-item .icon{width:10px;height:10px}.mock-main{padding:13px 9px}.mock-heading{font-size:14px}.mock-small{font-size:8px}.stat-grid{gap:3px}.stat{padding:8px 4px}.stat b{font-size:8px}.stat p{font-size:6px}.activity{gap:4px}.mock-card{padding:8px}.mock-card h4{font-size:8px}.activity-row{gap:4px}.activity-row .mini-circle{width:16px;height:16px}.activity-row b{font-size:7px}.activity-row em{font-size:6px}.float-card{font-size:9px;padding:8px}.float-card.one{right:0;top:-5px}.float-card.two{bottom:-12px;left:0}.float-card small{font-size:7px}.ticker .container{justify-content:start;gap:12px 24px}.ticker span{font-size:11px}.pillar-grid,.feature-grid,.two-grid{grid-template-columns:1fr}.pillar,.pillar:last-child{grid-column:auto;min-height:295px}.pillar-number{margin-bottom:25px}.section-title{font-size:clamp(2rem,8vw,2.8rem)}.feature{min-height:175px}.bridge{margin-top:40px;padding:26px 20px}.bridge h3{font-size:24px}.steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}.step{padding:10px 2px;font-size:8px}.step b{font-size:8px}.step .icon{width:16px;height:16px}.governance-window{padding:12px}.gov-row{gap:3px}.gov-row div{padding:8px 5px}.gov-row b{font-size:9px}.gov-row span{font-size:8px}.two-solutions{padding-bottom:73px}.deep-card{padding:29px;min-height:320px}.principles .container{grid-template-columns:1fr 1fr;gap:20px}.principle{padding-left:12px}.contact{padding:76px 0}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions .btn{justify-content:center}footer .container{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.brand{font-size:23px}}
+  @media(max-width:600px){.container{width:calc(100% - 34px)}.section{padding:54px 0}.hero{padding:125px 0 62px;min-height:auto}.hero h1{font-size:clamp(2.45rem,10.9vw,3.5rem)}.hero-sub{font-size:14px}.hero-actions{flex-direction:column;align-items:stretch}.hero-proof{margin-top:26px}.showcase{padding:18px 4px 10px}.app-preview{transform:none}.mock-body{grid-template-columns:75px 1fr;min-height:280px}.mock-sidebar{padding:10px 5px}.mock-logo{font-size:10px;margin:0 3px 15px}.side-item{padding:8px 4px;font-size:7px;gap:4px}.side-item .icon{width:10px;height:10px}.mock-main{padding:13px 9px}.mock-heading{font-size:14px}.mock-small{font-size:8px}.stat-grid{gap:3px}.stat{padding:8px 4px}.stat b{font-size:8px}.stat p{font-size:6px}.activity{gap:4px}.mock-card{padding:8px}.mock-card h4{font-size:8px}.activity-row{gap:4px}.activity-row .mini-circle{width:16px;height:16px}.activity-row b{font-size:7px}.activity-row em{font-size:6px}.float-card{font-size:9px;padding:8px}.float-card.one{right:0;top:-5px}.float-card.two{bottom:-12px;left:0}.float-card small{font-size:7px}.ticker .container{justify-content:start;gap:12px 24px}.ticker span{font-size:11px}.pillar-grid,.feature-grid,.two-grid{grid-template-columns:1fr}.pillar,.pillar:last-child{grid-column:auto;min-height:295px}.pillar-number{margin-bottom:0}.section-title{font-size:clamp(2rem,8vw,2.8rem)}.feature{min-height:175px}.bridge{margin-top:40px;padding:26px 20px}.bridge h3{font-size:24px}.steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}.step{padding:10px 2px;font-size:8px}.step b{font-size:8px}.step .icon{width:16px;height:16px}.governance-window{padding:12px}.gov-row{gap:3px}.gov-row div{padding:8px 5px}.gov-row b{font-size:9px}.gov-row span{font-size:8px}.two-solutions{padding-bottom:73px}.deep-card{padding:29px;min-height:320px}.principles .container{grid-template-columns:1fr 1fr;gap:20px}.principle{padding-left:12px}.contact{padding:76px 0}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions .btn{justify-content:center}footer .container{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.brand{font-size:23px}}
   @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
   /* Identidade institucional e imagem real integradas diretamente no layout. */
@@ -193,12 +215,37 @@
 
     </div><!-- /.intro-viewport -->
 
-    <section class="section ecosystem" id="ecossistema"><div class="container"><div class="ecosystem-top"><div><span class="eyebrow">Um ecossistema. Três frentes.</span><h2 class="section-title">Transformar a gestão da saúde exige mais do que tecnologia.</h2></div><p class="section-lead">A QHealth reúne ferramentas digitais, conhecimento especializado e desenvolvimento profissional para apoiar organizações de saúde em toda a jornada da qualidade.</p></div>
-      <div class="pillar-grid">
-        <article class="pillar software"><div class="pillar-number">01 / TECNOLOGIA</div><div class="pillar-icon"><svg class="icon icon-lg"><use href="#i-layout"/></svg></div><h3>QHealth Software</h3><p>Uma plataforma para conectar governança, documentos, riscos, treinamentos, indicadores, auditorias e ações em fluxos rastreáveis.</p><a href="#software">Explorar o Software <svg class="icon"><use href="#i-arrow"/></svg></a></article>
-        <article class="pillar consult"><div class="pillar-number">02 / ESTRATÉGIA</div><div class="pillar-icon"><svg class="icon icon-lg"><use href="#i-brief"/></svg></div><h3>QHealth Consultoria</h3><p>Diagnóstico, estruturação de processos, apoio à acreditação e projetos de melhoria adaptados à realidade de cada instituição.</p><a href="#consultoria">Explorar a Consultoria <svg class="icon"><use href="#i-arrow"/></svg></a></article>
-        <article class="pillar academy"><div class="pillar-number">03 / CONHECIMENTO</div><div class="pillar-icon"><svg class="icon icon-lg"><use href="#i-school"/></svg></div><h3>QHealth Academia</h3><p>Capacitação de equipes, trilhas de aprendizado e desenvolvimento de competências para fortalecer uma cultura de qualidade e segurança.</p><a href="#academia">Explorar a Academia <svg class="icon"><use href="#i-arrow"/></svg></a></article>
-      </div></div></section>
+    <section class="section ecosystem" id="ecossistema">
+      <div class="container">
+        <div class="ecosystem-top">
+          <div>
+            <span class="eyebrow">Um ecossistema. Três frentes.</span>
+            <h2 class="section-title">Transformar a gestão da saúde exige <span class="gradient-text">tecnologia, método e resultado.</span></h2>
+          </div>
+          <p class="section-lead">A QHealth integra tecnologia, consultoria especializada e desenvolvimento profissional para fortalecer a qualidade, a segurança do paciente e a melhoria contínua nas instituições de saúde.</p>
+        </div>
+        <div class="pillar-grid">
+          <article class="pillar software">
+            <div class="pillar-top"><div class="pillar-icon"><svg class="icon icon-lg"><use href="#i-layout"/></svg></div><span class="pillar-number">01 / TECNOLOGIA</span></div>
+            <h3>QHealth Software</h3>
+            <p>Uma plataforma integrada que conecta governança, documentos, riscos, treinamentos, indicadores, auditorias e planos de ação em fluxos rastreáveis.</p>
+            <a href="#software">Explorar o Software <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="pillar consult">
+            <div class="pillar-top"><div class="pillar-icon"><svg class="icon icon-lg"><use href="#i-brief"/></svg></div><span class="pillar-number">02 / ESTRATÉGIA</span></div>
+            <h3>QHealth Consultoria</h3>
+            <p>Diagnóstico institucional, estruturação de processos, apoio à acreditação e projetos de melhoria alinhados à realidade de cada organização de saúde.</p>
+            <a href="#consultoria">Explorar a Consultoria <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="pillar academy">
+            <div class="pillar-top"><div class="pillar-icon"><svg class="icon icon-lg"><use href="#i-school"/></svg></div><span class="pillar-number">03 / CONHECIMENTO</span></div>
+            <h3>QHealth Academia</h3>
+            <p>Capacitação de equipes, trilhas de aprendizagem e desenvolvimento de competências para fortalecer a cultura da qualidade e da segurança do paciente.</p>
+            <a href="#academia">Explorar a Academia <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section class="section capabilities" id="diferenciais"><div class="container"><div class="cap-top"><div><span class="eyebrow">Diferenciais que fazem sentido na prática</span><h2 class="section-title">Não é sobre ter mais telas. É sobre <span style="color:#0b9f80">fazer tudo conversar.</span></h2></div><p class="section-lead" style="max-width:335px">Conheça as frentes operacionais que ajudam a transformar rotinas isoladas em uma gestão organizada e rastreável.</p></div>
       <div class="filters" role="group" aria-label="Filtrar funcionalidades"><button class="filter active" data-filter="todos" aria-pressed="true">Todos os recursos</button><button class="filter" data-filter="governanca" aria-pressed="false">Governança</button><button class="filter" data-filter="pessoas" aria-pressed="false">Pessoas</button><button class="filter" data-filter="seguranca" aria-pressed="false">Segurança</button><button class="filter" data-filter="desempenho" aria-pressed="false">Desempenho</button></div>
