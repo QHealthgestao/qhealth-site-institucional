@@ -12,7 +12,7 @@
   <style>
   :root{--ink:#102637;--navy:#071a24;--deep:#06131e;--teal:#12bd96;--lime:#6ad99e;--cyan:#35bcd8;--blue:#2482ca;--muted:#5d7382;--pale:#f4f9fa;--line:#dbe8e9;--white:#fff;--shadow:0 20px 55px rgba(7,39,45,.12);font-synthesis:none}
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:82px}
+  html{scroll-behavior:smooth;scroll-padding-top:75px}
   body{margin:0;font-family:'DM Sans',Arial,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
   button,input,textarea{font:inherit}
   button{cursor:pointer}
@@ -129,13 +129,9 @@
   .software-message h2{font:800 clamp(2.25rem,3.4vw,3.65rem)/1.10 Manrope,Arial,sans-serif;letter-spacing:-.058em;max-width:610px;margin:17px 0 17px}
   .software-message .gradient-text{background:linear-gradient(100deg,#68dfaa,#40cfca 55%,#65b9f1);-webkit-background-clip:text;background-clip:text;color:transparent}
   .software-lead{font-size:clamp(14px,1.05vw,16px);line-height:1.65;color:#b8d0d6;max-width:550px;margin:0}
-  .software-value{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 17px;list-style:none;padding:0;margin:21px 0 23px;max-width:535px}
+  .software-value{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 17px;list-style:none;padding:0;margin:23px 0 0;max-width:535px}
   .software-value li{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;line-height:1.4;color:#deefef}
   .software-value .icon{width:16px;height:16px;color:#5de1ad}
-  .software-actions{display:flex;align-items:center;flex-wrap:wrap;gap:13px}
-  .software-actions .btn{padding:14px 18px}
-  .software-actions .software-secondary{font-size:12px;font-weight:800;color:#8be3d3;display:inline-flex;align-items:center;gap:7px}
-  .software-actions .software-secondary:hover{text-decoration:underline}
   .software-demo{margin:0;min-width:0}
   .software-frame{border-radius:19px;border:1px solid rgba(96,224,210,.55);padding:7px;background:#092630;box-shadow:0 24px 70px rgba(0,0,0,.45),0 0 0 8px rgba(60,218,194,.055);overflow:hidden}
   .software-frame-head{height:30px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 10px 6px;font-size:9px;letter-spacing:.09em;font-weight:800;color:#b3d6da}
@@ -173,8 +169,6 @@
     .software-section>.container{width:calc(100% - 34px)}
     .software-message h2{font-size:clamp(2rem,8.2vw,3rem)}
     .software-value{grid-template-columns:1fr}
-    .software-actions{align-items:stretch}
-    .software-actions .btn{width:100%}
     .software-stage{gap:27px}
     .software-frame{padding:4px;border-radius:12px}
     .software-frame-head{height:23px;font-size:7px;padding:0 5px 3px}
@@ -353,17 +347,13 @@
           <div class="software-message">
             <span class="eyebrow">QHealth Software · Tecnologia para a Qualidade</span>
             <h2 id="software-heading">Da notificação à <span class="gradient-text">melhoria contínua.</span> Tudo em um só fluxo.</h2>
-            <p class="software-lead">Uma plataforma que conecta notificação, investigação, ações, acompanhamento e resultados. Informação organizada para fortalecer a governança, a segurança do paciente e a tomada de decisão.</p>
+            <p class="software-lead">Uma notificação não pode terminar em um formulário. No QHealth, cada ocorrência se conecta à investigação, às ações, aos responsáveis e às evidências até a verificação dos resultados. Menos informações dispersas. Mais rastreabilidade, decisões consistentes e segurança para o paciente.</p>
             <ul class="software-value">
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Gestão integrada</li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Rastreabilidade das ações</li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Evidências organizadas</li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Qualidade e segurança</li>
             </ul>
-            <div class="software-actions">
-              <a class="btn btn-primary" href="#contato">Solicitar uma apresentação <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-              <a class="software-secondary" href="#diferenciais">Explorar funcionalidades <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-            </div>
           </div>
           <figure class="software-demo">
             <div class="software-frame">
