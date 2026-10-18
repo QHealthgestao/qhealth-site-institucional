@@ -209,7 +209,17 @@
   .qh-academia{background:radial-gradient(ellipse 60% 90% at 98% 40%,rgba(50,200,151,.13),transparent 77%),linear-gradient(135deg,#f6fcf9,#eaf7f5 58%,#eff7fd);color:#103043}
   .qh-academia .eyebrow{color:#098d76}
   .qh-academia .gradient-text{background:linear-gradient(100deg,#078b70,#1fb9a8 55%,#277faf);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .qh-academia .qh-service-lead{color:#516d79}
+  .qh-academia .qh-service-layout{grid-template-columns:minmax(0,1.19fr) minmax(0,.81fr);gap:clamp(27px,3vw,48px)}
+  .qh-academia h2{font-size:clamp(2.45rem,2.95vw,3.28rem);letter-spacing:-.058em;line-height:1.13;max-width:100%;margin-bottom:21px}
+  .qh-academia h2 .gradient-text{display:block}
+  .qh-academia .qh-service-lead{color:#516d79;max-width:790px;line-height:1.68}
+  .qh-academia .qh-service-benefits{max-width:850px;column-gap:22px;row-gap:17px;margin:24px 0 30px}
+  .qh-academia .qh-service-benefits li{white-space:nowrap;font-size:clamp(11px,.83vw,13px);letter-spacing:-.005em;align-items:center}
+  .qh-academia .qh-service-benefits .icon{margin-top:0}
+  @media(min-width:1001px) and (max-width:1360px){
+    .qh-academia .qh-service-benefits{grid-template-columns:1fr;row-gap:10px;margin:19px 0 23px}
+    .qh-academia h2{font-size:clamp(2.35rem,3.15vw,3rem)}
+  }
   .qh-academia .qh-service-benefits{color:#254455}
   .qh-academia .qh-service-benefits .icon{color:#098f7d}
   .qh-academia .qh-service-cta{background:#083d45;color:#fff}
@@ -228,7 +238,7 @@
   .qh-learning-list p{font-size:12px;color:#58717a;line-height:1.5;margin:0}
   .qh-learning-foot{padding:16px 25px;background:#f3faf8;border-top:1px solid #e0ece9;color:#117c6d;font-size:11px;font-weight:800;letter-spacing:.035em;text-align:center}
   @media(max-width:1000px){
-    .qh-service-layout{grid-template-columns:1fr;gap:29px}
+    .qh-service-layout,.qh-academia .qh-service-layout{grid-template-columns:1fr;gap:29px}
     .qh-service{display:block;min-height:0;padding:60px 0}
     .qh-service h2{max-width:780px}
     .qh-method,.qh-learning{max-width:850px}
@@ -237,7 +247,8 @@
     .qh-service{padding:50px 0}
     .qh-service>.container{width:calc(100% - 34px)}
     .qh-service h2{font-size:clamp(2.15rem,8.8vw,3.2rem)}
-    .qh-service-benefits{grid-template-columns:1fr;gap:12px;margin:20px 0 25px}
+    .qh-service-benefits,.qh-academia .qh-service-benefits{grid-template-columns:1fr;gap:12px;margin:20px 0 25px}
+    .qh-academia .qh-service-benefits li{white-space:normal;font-size:13px}
     .qh-service-cta{width:100%}
     .qh-method{padding:17px}
     .qh-method-grid{grid-template-columns:1fr;gap:10px}
@@ -467,12 +478,12 @@
       <div class="container qh-service-layout">
         <div class="qh-service-message">
           <span class="eyebrow">QHealth Academia · Conhecimento Aplicado</span>
-          <h2 id="academia-heading">Conhecimento que transforma a prática. <span class="gradient-text">Pessoas que elevam a qualidade.</span></h2>
-          <p class="qh-service-lead">Desenvolver competências é fortalecer a segurança do paciente todos os dias. A QHealth Academia conecta aprendizado, aplicação prática e evidências de capacitação para apoiar equipes e lideranças em uma jornada permanente de evolução.</p>
+          <h2 id="academia-heading">Conhecimento que transforma. <span class="gradient-text">Pessoas que elevam a qualidade.</span></h2>
+          <p class="qh-service-lead">O conhecimento só gera impacto quando se transforma em prática segura. A QHealth Academia desenvolve profissionais, equipes e lideranças por meio de capacitações conectadas à realidade dos serviços de saúde. Cada aprendizagem fortalece competências, orienta decisões, valoriza evidências e contribui para uma cultura de qualidade, melhoria contínua e segurança do paciente.</p>
           <ul class="qh-service-benefits">
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Treinamentos e trilhas de aprendizagem</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Desenvolvimento de equipes e lideranças</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Capacitação conectada à realidade assistencial</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Treinamentos e trilhas práticas</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Desenvolvimento de equipes e líderes</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Capacitação para a rotina assistencial</li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Registros, ciência e certificados</li>
           </ul>
           <button class="qh-service-cta" type="button" data-qh-interest="QHealth Academia">Conhecer a QHealth Academia <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
