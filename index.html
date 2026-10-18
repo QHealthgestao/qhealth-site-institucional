@@ -184,7 +184,79 @@
   .governance-window{background:#f6fafb;border:1px solid #dfeaec;border-radius:16px;padding:21px;box-shadow:var(--shadow);position:relative}.gov-heading{display:flex;align-items:center;justify-content:space-between;padding:0 0 16px;border-bottom:1px solid #e2eded}.gov-heading b{font-size:14px;letter-spacing:-.03em}.pill{font-size:10px;background:#e3f8f0;color:#00896d;padding:7px 9px;border-radius:20px;font-weight:800}.gov-group{background:white;border:1px solid #e0ebec;margin-top:11px;border-radius:9px;padding:15px}.gov-itemtop{display:flex;align-items:center;justify-content:space-between;gap:10px}.gov-group strong{font-size:12px}.gov-meta{font-size:10px;color:#8b9da5;margin-top:4px}.gov-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.gov-row div{background:#eff8f8;padding:10px 9px;border-radius:7px}.gov-row b{font-size:11px;display:block}.gov-row span{font-size:9px;color:#76909a;display:block;margin-top:3px}.gov-status{color:#108c70;font-size:10px;font-weight:800}
   .gov-footer{margin-top:14px;padding:13px 15px;border:1px dashed #a9d8cb;color:#0b7768;border-radius:9px;background:#edf9f5;font-size:11px;font-weight:700;display:flex;gap:8px;align-items:center}
   /* consult + academy */
-  .two-solutions{padding:clamp(24px,4svh,45px) 0;background:#fff;min-height:calc(100svh - 90px);display:flex;align-items:center}.deep-card{min-height:346px;padding:39px;border-radius:16px;position:relative;overflow:hidden;display:flex;flex-direction:column}.deep-card.cons{background:linear-gradient(135deg,#eaf5fd,#f5fafc 60%,#e7f7f3)}.deep-card.acad{background:linear-gradient(130deg,#e8f8ee,#f3fcf6 60%,#eaf5f7)}.two-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.deep-card .eyebrow{font-size:10px}.deep-card h3{font:800 31px/1.16 Manrope,Arial,sans-serif;letter-spacing:-.06em;margin:18px 0 13px;max-width:370px}.deep-card p{font-size:13px;color:#5b7280;max-width:440px;line-height:1.7;margin:0 0 21px}.deep-card ul{padding:0;margin:0 0 25px;display:grid;gap:11px;list-style:none}.deep-card li{font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px}.deep-card li .icon{color:#0da687;width:15px;height:15px}.deep-card a{margin-top:auto;align-self:flex-start;font-size:12px;font-weight:800;color:#087e69;display:flex;gap:7px;align-items:center}
+  /* Consultoria e Academia: duas seções institucionais autônomas. */
+  .qh-service{min-height:calc(100svh - 75px);display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden;padding:clamp(32px,5svh,62px) 0;scroll-margin-top:75px}
+  .qh-service>.container{width:min(1460px,calc(100% - 64px));position:relative;z-index:1}
+  .qh-service-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:clamp(34px,4vw,82px)}
+  .qh-service-message{min-width:0}
+  .qh-service .eyebrow{font-size:11px;letter-spacing:.14em}
+  .qh-service h2{font:800 clamp(2.6rem,3.75vw,4.15rem)/1.1 Manrope,Arial,sans-serif;letter-spacing:-.064em;margin:17px 0 19px;max-width:740px}
+  .qh-service .gradient-text{background:linear-gradient(100deg,#6de8b2 0%,#42d0c4 53%,#63b8f0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .qh-service-lead{max-width:635px;font-size:clamp(14px,1.12vw,17px);line-height:1.72;margin:0}
+  .qh-service-benefits{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 20px;padding:0;margin:25px 0 27px;max-width:650px}
+  .qh-service-benefits li{display:flex;align-items:flex-start;gap:9px;font-size:13px;font-weight:700;line-height:1.5}
+  .qh-service-benefits .icon{width:16px;height:16px;margin-top:2px;flex:none}
+  .qh-service-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:10px;padding:15px 20px;font-size:13px;font-weight:800;box-shadow:0 12px 30px rgba(4,55,66,.14);transition:transform .2s,box-shadow .2s}
+  .qh-service-cta:hover{transform:translateY(-2px);box-shadow:0 17px 38px rgba(4,55,66,.22)}
+  .qh-service-cta .icon{width:17px;height:17px}
+  .qh-consultoria{background:radial-gradient(ellipse 60% 85% at 94% 20%,rgba(30,139,157,.19),transparent 78%),radial-gradient(ellipse 55% 80% at -8% 100%,rgba(24,155,113,.19),transparent 80%),linear-gradient(125deg,#061c27,#092834 62%,#061a27);color:#f3ffff}
+  .qh-consultoria:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;background-image:linear-gradient(rgba(120,227,216,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(120,227,216,.15) 1px,transparent 1px);background-size:62px 62px;z-index:-1}
+  .qh-consultoria .eyebrow{color:#72e2c0}
+  .qh-consultoria .qh-service-lead{color:#b8d1d8}
+  .qh-consultoria .qh-service-benefits{color:#def3f2}
+  .qh-consultoria .qh-service-benefits .icon{color:#5de1b2}
+  .qh-consultoria .qh-service-cta{background:linear-gradient(110deg,#17b993,#43cfb9);color:#062b32}
+  .qh-method{border:1px solid rgba(119,230,217,.30);border-radius:22px;background:linear-gradient(145deg,rgba(19,66,80,.82),rgba(5,28,40,.94));box-shadow:0 30px 80px rgba(0,0,0,.26),0 0 0 9px rgba(83,218,190,.035);padding:clamp(22px,2.2vw,33px)}
+  .qh-method-label{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#82dec9;margin:0 0 8px}
+  .qh-method h3{font:800 clamp(21px,1.95vw,29px)/1.22 Manrope,Arial,sans-serif;letter-spacing:-.05em;color:white;margin:0 0 23px}
+  .qh-method-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+  .qh-method-step{border:1px solid rgba(129,224,216,.23);border-radius:14px;padding:clamp(17px,1.6vw,23px);min-height:164px;background:rgba(9,54,65,.64);display:flex;flex-direction:column}
+  .qh-method-number{display:flex;align-items:center;justify-content:space-between;color:#65d9bb;font:800 12px Manrope,Arial,sans-serif;letter-spacing:.12em}
+  .qh-method-number .icon{width:23px;height:23px}
+  .qh-method-step h4{font:800 17px Manrope,Arial,sans-serif;letter-spacing:-.035em;color:#f5ffff;margin:16px 0 7px}
+  .qh-method-step p{font-size:12px;line-height:1.55;color:#b2cdd0;margin:0}
+  .qh-method-foot{display:flex;align-items:center;gap:10px;margin-top:19px;color:#97cfce;font-size:11px;font-weight:700}
+  .qh-method-foot .icon{color:#5addb5;width:17px;height:17px}
+  .qh-academia{background:radial-gradient(ellipse 60% 90% at 98% 40%,rgba(50,200,151,.13),transparent 77%),linear-gradient(135deg,#f6fcf9,#eaf7f5 58%,#eff7fd);color:#103043}
+  .qh-academia .eyebrow{color:#098d76}
+  .qh-academia .gradient-text{background:linear-gradient(100deg,#078b70,#1fb9a8 55%,#277faf);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .qh-academia .qh-service-lead{color:#516d79}
+  .qh-academia .qh-service-benefits{color:#254455}
+  .qh-academia .qh-service-benefits .icon{color:#098f7d}
+  .qh-academia .qh-service-cta{background:#083d45;color:#fff}
+  .qh-learning{border:1px solid #cbdfdf;border-radius:22px;background:#fff;box-shadow:0 25px 70px rgba(18,72,80,.14);overflow:hidden}
+  .qh-learning-head{padding:clamp(23px,2.2vw,32px);background:linear-gradient(113deg,#073e46,#075e59);color:white;position:relative;overflow:hidden}
+  .qh-learning-head:before{content:"";position:absolute;right:-60px;top:-80px;width:220px;height:220px;border:1px solid rgba(145,239,209,.24);border-radius:50%;box-shadow:0 0 0 47px rgba(99,225,192,.07)}
+  .qh-learning-head>.eyebrow{color:#9df1d0}
+  .qh-learning-head h3{font:800 clamp(23px,2vw,30px)/1.2 Manrope,Arial,sans-serif;letter-spacing:-.053em;max-width:450px;margin:15px 0 10px;position:relative}
+  .qh-learning-head p{font-size:12px;color:#c3e5e1;line-height:1.6;max-width:440px;margin:0;position:relative}
+  .qh-learning-list{padding:8px clamp(20px,2vw,31px);list-style:none;margin:0}
+  .qh-learning-list li{display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:17px;padding:19px 0}
+  .qh-learning-list li+li{border-top:1px solid #e0ebeb}
+  .qh-learning-icon{width:46px;height:46px;display:grid;place-items:center;border:1px solid #c3e9dc;border-radius:12px;background:#eaf8f2;color:#098d77}
+  .qh-learning-icon .icon{width:23px;height:23px}
+  .qh-learning-list b{display:block;font:800 16px Manrope,Arial,sans-serif;letter-spacing:-.035em;color:#123a48;margin-bottom:4px}
+  .qh-learning-list p{font-size:12px;color:#58717a;line-height:1.5;margin:0}
+  .qh-learning-foot{padding:16px 25px;background:#f3faf8;border-top:1px solid #e0ece9;color:#117c6d;font-size:11px;font-weight:800;letter-spacing:.035em;text-align:center}
+  @media(max-width:1000px){
+    .qh-service-layout{grid-template-columns:1fr;gap:29px}
+    .qh-service{display:block;min-height:0;padding:60px 0}
+    .qh-service h2{max-width:780px}
+    .qh-method,.qh-learning{max-width:850px}
+  }
+  @media(max-width:600px){
+    .qh-service{padding:50px 0}
+    .qh-service>.container{width:calc(100% - 34px)}
+    .qh-service h2{font-size:clamp(2.15rem,8.8vw,3.2rem)}
+    .qh-service-benefits{grid-template-columns:1fr;gap:12px;margin:20px 0 25px}
+    .qh-service-cta{width:100%}
+    .qh-method{padding:17px}
+    .qh-method-grid{grid-template-columns:1fr;gap:10px}
+    .qh-method-step{min-height:0}
+    .qh-learning-head{padding:23px}
+    .qh-learning-list{padding:5px 19px}
+    .qh-learning-list li{gap:12px}
+  }
   /* proof / contact */
   .principles{background:#f3f8f9;padding:56px 0}.principles .container{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}.principle{border-left:2px solid #35c5ad;padding-left:19px}.principle b{display:block;font-size:13px;margin-bottom:6px}.principle p{font-size:12px;line-height:1.65;margin:0;color:#687d87}
   .contact{position:relative;overflow:hidden;background:#061b26;padding:clamp(45px,6svh,76px) 0;color:white}.contact:before{content:'';position:absolute;width:440px;height:440px;border:1px solid rgba(64,213,174,.15);border-radius:50%;right:-100px;top:-260px;box-shadow:0 0 0 80px rgba(38,182,168,.025),0 0 0 165px rgba(38,182,168,.025)}
@@ -194,8 +266,8 @@
   dialog{max-width:min(500px,calc(100vw - 32px));border:1px solid #d6e9e8;background:#fff;border-radius:15px;padding:29px;box-shadow:0 20px 70px rgba(0,0,0,.32);color:#132e3a}dialog::backdrop{background:rgba(2,16,24,.7);backdrop-filter:blur(3px)}dialog h2{font:800 22px Manrope,sans-serif;letter-spacing:-.04em;margin:0 0 9px}dialog p{font-size:13px;line-height:1.65;color:#607886}dialog .close-modal{position:absolute;right:13px;top:11px;border:0;background:#eaf4f2;border-radius:8px;width:31px;height:31px;color:#153e43;display:grid;place-items:center}dialog .field{display:grid;gap:5px;margin-top:13px}dialog label{font-size:11px;font-weight:800}dialog input,dialog textarea{border:1px solid #c9dfe1;border-radius:8px;padding:12px;width:100%;outline:none;font-size:13px}dialog input:focus,dialog textarea:focus{border-color:#2bbf9a;box-shadow:0 0 0 3px rgba(43,191,154,.1)}.modal-note{font-size:11px;color:#607d84;background:#eff7f6;padding:10px 12px;border-radius:7px;line-height:1.5;margin:13px 0}
   @media(max-width:900px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.capabilities{display:block;min-height:auto}.cap-top{display:block}.cap-top .section-lead{max-width:650px;margin-top:14px}}
   @media(max-width:1050px){.menu{gap:15px}.hero-inner{grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);gap:32px}.float-card.one{right:-5px}.mock-body{grid-template-columns:95px 1fr}.stat-grid{gap:5px}.stat{padding:9px 7px}.focus-layout{gap:36px}.pillars{padding:24px}}
-  @media(max-width:850px){.ecosystem,.focus,.two-solutions,.software-section{display:block;min-height:0}.menu{position:absolute;top:75px;left:0;right:0;background:#09232e;border-bottom:1px solid rgba(255,255,255,.15);padding:18px 26px;flex-direction:column;align-items:stretch;gap:18px;display:none}.menu.open{display:flex}.menu-toggle{display:flex}.intro-viewport{display:block;min-height:auto}.hero{display:block;min-height:auto;padding:133px 0 65px}.hero-inner{grid-template-columns:1fr;gap:35px}.hero h1{max-width:760px}.showcase{max-width:610px;margin:0 auto;width:100%}.ecosystem-top,.cap-top{display:block}.ecosystem .section-lead{max-width:600px}.pillar-grid{grid-template-columns:1fr 1fr}.pillar:last-child{grid-column:1/-1;min-height:280px}.focus-layout{grid-template-columns:1fr}.governance-window{max-width:700px}.principles .container{grid-template-columns:repeat(2,1fr)}.contact-layout{grid-template-columns:1fr}.two-grid{gap:12px}}
-  @media(max-width:600px){.container{width:calc(100% - 34px)}.section{padding:54px 0}.hero{padding:125px 0 62px;min-height:auto}.hero h1{font-size:clamp(2.45rem,10.9vw,3.5rem)}.hero-sub{font-size:14px}.hero-actions{flex-direction:column;align-items:stretch}.hero-proof{margin-top:26px}.showcase{padding:18px 4px 10px}.app-preview{transform:none}.mock-body{grid-template-columns:75px 1fr;min-height:280px}.mock-sidebar{padding:10px 5px}.mock-logo{font-size:10px;margin:0 3px 15px}.side-item{padding:8px 4px;font-size:7px;gap:4px}.side-item .icon{width:10px;height:10px}.mock-main{padding:13px 9px}.mock-heading{font-size:14px}.mock-small{font-size:8px}.stat-grid{gap:3px}.stat{padding:8px 4px}.stat b{font-size:8px}.stat p{font-size:6px}.activity{gap:4px}.mock-card{padding:8px}.mock-card h4{font-size:8px}.activity-row{gap:4px}.activity-row .mini-circle{width:16px;height:16px}.activity-row b{font-size:7px}.activity-row em{font-size:6px}.float-card{font-size:9px;padding:8px}.float-card.one{right:0;top:-5px}.float-card.two{bottom:-12px;left:0}.float-card small{font-size:7px}.ticker .container{justify-content:start;gap:12px 24px}.ticker span{font-size:11px}.pillar-grid,.feature-grid,.two-grid{grid-template-columns:1fr}.pillar,.pillar:last-child{grid-column:auto;min-height:295px}.pillar-number{margin-bottom:0}.capabilities>.container{width:calc(100% - 34px)}.filters{gap:8px}.filter{padding:10px 15px;font-size:12px}.feature{min-height:225px;padding:20px}.feature .glyph{margin-bottom:14px}.section-title{font-size:clamp(2rem,8vw,2.8rem)}.feature{min-height:175px}.governance-window{padding:12px}.gov-row{gap:3px}.gov-row div{padding:8px 5px}.gov-row b{font-size:9px}.gov-row span{font-size:8px}.two-solutions{padding-bottom:73px}.deep-card{padding:29px;min-height:320px}.principles .container{grid-template-columns:1fr 1fr;gap:20px}.principle{padding-left:12px}.contact{padding:76px 0}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions .btn{justify-content:center}footer .container{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.brand{font-size:23px}}
+  @media(max-width:850px){.ecosystem,.focus,.software-section{display:block;min-height:0}.menu{position:absolute;top:75px;left:0;right:0;background:#09232e;border-bottom:1px solid rgba(255,255,255,.15);padding:18px 26px;flex-direction:column;align-items:stretch;gap:18px;display:none}.menu.open{display:flex}.menu-toggle{display:flex}.intro-viewport{display:block;min-height:auto}.hero{display:block;min-height:auto;padding:133px 0 65px}.hero-inner{grid-template-columns:1fr;gap:35px}.hero h1{max-width:760px}.showcase{max-width:610px;margin:0 auto;width:100%}.ecosystem-top,.cap-top{display:block}.ecosystem .section-lead{max-width:600px}.pillar-grid{grid-template-columns:1fr 1fr}.pillar:last-child{grid-column:1/-1;min-height:280px}.focus-layout{grid-template-columns:1fr}.governance-window{max-width:700px}.principles .container{grid-template-columns:repeat(2,1fr)} .contact-layout{grid-template-columns:1fr}}
+  @media(max-width:600px){.container{width:calc(100% - 34px)}.section{padding:54px 0}.hero{padding:125px 0 62px;min-height:auto}.hero h1{font-size:clamp(2.45rem,10.9vw,3.5rem)}.hero-sub{font-size:14px}.hero-actions{flex-direction:column;align-items:stretch}.hero-proof{margin-top:26px}.showcase{padding:18px 4px 10px}.app-preview{transform:none}.mock-body{grid-template-columns:75px 1fr;min-height:280px}.mock-sidebar{padding:10px 5px}.mock-logo{font-size:10px;margin:0 3px 15px}.side-item{padding:8px 4px;font-size:7px;gap:4px}.side-item .icon{width:10px;height:10px}.mock-main{padding:13px 9px}.mock-heading{font-size:14px}.mock-small{font-size:8px}.stat-grid{gap:3px}.stat{padding:8px 4px}.stat b{font-size:8px}.stat p{font-size:6px}.activity{gap:4px}.mock-card{padding:8px}.mock-card h4{font-size:8px}.activity-row{gap:4px}.activity-row .mini-circle{width:16px;height:16px}.activity-row b{font-size:7px}.activity-row em{font-size:6px}.float-card{font-size:9px;padding:8px}.float-card.one{right:0;top:-5px}.float-card.two{bottom:-12px;left:0}.float-card small{font-size:7px}.ticker .container{justify-content:start;gap:12px 24px}.ticker span{font-size:11px}.pillar-grid,.feature-grid{grid-template-columns:1fr}.pillar,.pillar:last-child{grid-column:auto;min-height:295px}.pillar-number{margin-bottom:0}.capabilities>.container{width:calc(100% - 34px)}.filters{gap:8px}.filter{padding:10px 15px;font-size:12px}.feature{min-height:225px;padding:20px}.feature .glyph{margin-bottom:14px}.section-title{font-size:clamp(2rem,8vw,2.8rem)}.feature{min-height:175px}.governance-window{padding:12px}.gov-row{gap:3px}.gov-row div{padding:8px 5px}.gov-row b{font-size:9px}.gov-row span{font-size:8px}.principles .container{grid-template-columns:1fr 1fr;gap:20px}.principle{padding-left:12px}.contact{padding:76px 0}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions .btn{justify-content:center}footer .container{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.brand{font-size:23px}}
   @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
   /* Identidade institucional e imagem real integradas diretamente no layout. */
@@ -383,7 +455,63 @@
       <div class="focus-list"><div class="focus-list-item"><div class="mark"><svg class="icon"><use href="#i-users"/></svg></div><div><b>Composição e organização</b><p>Membros, atribuições e histórico da governança institucional.</p></div></div><div class="focus-list-item"><div class="mark"><svg class="icon"><use href="#i-calendar"/></svg></div><div><b>Reuniões e atas</b><p>Registro de discussões, decisões e encaminhamentos.</p></div></div><div class="focus-list-item"><div class="mark"><svg class="icon"><use href="#i-check"/></svg></div><div><b>Responsáveis e acompanhamento</b><p>Visibilidade do que ficou acordado e precisa ser realizado.</p></div></div></div>
       </div><div class="governance-window" aria-label="Exemplo visual ilustrativo de gestão de comissões"><div class="gov-heading"><b>Governança institucional</b><span class="pill">Exemplo ilustrativo</span></div><div class="gov-group"><div class="gov-itemtop"><strong>Núcleo de Segurança do Paciente</strong><span class="gov-status">● Acompanhamento</span></div><div class="gov-meta">Composição • Agenda • Reuniões • Atas</div><div class="gov-row"><div><b>Reuniões</b><span>Organização</span></div><div><b>Atas</b><span>Rastreabilidade</span></div><div><b>Ações</b><span>Acompanhamento</span></div></div></div><div class="gov-group"><div class="gov-itemtop"><strong>Comissão de Controle de Infecção</strong><span class="gov-status">● Acompanhamento</span></div><div class="gov-meta">Composição • Agenda • Reuniões • Atas</div><div class="gov-row"><div><b>Deliberações</b><span>Registros</span></div><div><b>Responsáveis</b><span>Definição</span></div><div><b>Evidências</b><span>Histórico</span></div></div></div><div class="gov-footer"><svg class="icon"><use href="#i-link"/></svg> Conexão entre governança, documentos, pessoas e ações</div></div></div></section>
 
-    <section class="two-solutions"><div class="container two-grid"><article class="deep-card cons" id="consultoria"><span class="eyebrow">QHealth Consultoria</span><h3>Estratégia para transformar boas intenções em processos sólidos.</h3><p>Apoio técnico para estruturar o sistema de gestão, fortalecer práticas e preparar equipes para novos patamares de qualidade.</p><ul><li><svg class="icon"><use href="#i-check"/></svg> Diagnóstico e maturidade da gestão</li><li><svg class="icon"><use href="#i-check"/></svg> Estruturação e melhoria de processos</li><li><svg class="icon"><use href="#i-check"/></svg> Preparação para acreditação e auditorias</li></ul><a href="#contato">Conheça nossa abordagem <svg class="icon"><use href="#i-arrow"/></svg></a></article><article class="deep-card acad" id="academia"><span class="eyebrow">QHealth Academia</span><h3>Conhecimento que desenvolve pessoas e fortalece a cultura de segurança.</h3><p>Aprendizagem aplicada ao dia a dia da saúde: conteúdo relevante, trilhas de capacitação e formação orientada à prática.</p><ul><li><svg class="icon"><use href="#i-check"/></svg> Cursos e trilhas de desenvolvimento</li><li><svg class="icon"><use href="#i-check"/></svg> Capacitação de equipes e lideranças</li><li><svg class="icon"><use href="#i-check"/></svg> Registros de participação e certificados</li></ul><a href="#contato">Conheça a Academia <svg class="icon"><use href="#i-arrow"/></svg></a></article></div></section>
+    <section class="qh-service qh-consultoria" id="consultoria" aria-labelledby="consultoria-heading">
+      <div class="container qh-service-layout">
+        <div class="qh-service-message">
+          <span class="eyebrow">QHealth Consultoria · Estratégia e Execução</span>
+          <h2 id="consultoria-heading">Qualidade não se improvisa. <span class="gradient-text">Se constrói com método.</span></h2>
+          <p class="qh-service-lead">Da análise de maturidade à preparação para acreditações, ajudamos sua instituição a transformar requisitos em processos claros, equipes alinhadas e melhoria contínua. Estratégia que sai do papel e se transforma em prática.</p>
+          <ul class="qh-service-benefits">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Diagnóstico e maturidade institucional</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Gestão de riscos e processos</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Preparação para acreditações e auditorias</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Indicadores e melhoria contínua</li>
+          </ul>
+          <button class="qh-service-cta" type="button" data-qh-interest="QHealth Consultoria">Conversar sobre Consultoria <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="qh-method" aria-label="Método de atuação da QHealth Consultoria">
+          <p class="qh-method-label">Da estratégia à execução</p>
+          <h3>Uma jornada estruturada para resultados sustentáveis.</h3>
+          <div class="qh-method-grid">
+            <article class="qh-method-step"><div class="qh-method-number">01 <svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></div><h4>Diagnosticar</h4><p>Compreender o cenário, os riscos e as oportunidades de evolução.</p></article>
+            <article class="qh-method-step"><div class="qh-method-number">02 <svg class="icon" aria-hidden="true"><use href="#i-branch"/></svg></div><h4>Estruturar</h4><p>Organizar processos, responsabilidades e evidências institucionais.</p></article>
+            <article class="qh-method-step"><div class="qh-method-number">03 <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div><h4>Implementar</h4><p>Transformar planos em rotinas, práticas e ações acompanháveis.</p></article>
+            <article class="qh-method-step"><div class="qh-method-number">04 <svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></div><h4>Evoluir</h4><p>Monitorar resultados e fortalecer a cultura de melhoria contínua.</p></article>
+          </div>
+          <div class="qh-method-foot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Cada instituição tem seu contexto. Cada plano precisa fazer sentido.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="qh-service qh-academia" id="academia" aria-labelledby="academia-heading">
+      <div class="container qh-service-layout">
+        <div class="qh-service-message">
+          <span class="eyebrow">QHealth Academia · Conhecimento Aplicado</span>
+          <h2 id="academia-heading">Conhecimento que transforma a prática. <span class="gradient-text">Pessoas que elevam a qualidade.</span></h2>
+          <p class="qh-service-lead">Desenvolver competências é fortalecer a segurança do paciente todos os dias. A QHealth Academia conecta aprendizado, aplicação prática e evidências de capacitação para apoiar equipes e lideranças em uma jornada permanente de evolução.</p>
+          <ul class="qh-service-benefits">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Treinamentos e trilhas de aprendizagem</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Desenvolvimento de equipes e lideranças</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Capacitação conectada à realidade assistencial</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Registros, ciência e certificados</li>
+          </ul>
+          <button class="qh-service-cta" type="button" data-qh-interest="QHealth Academia">Conhecer a QHealth Academia <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="qh-learning" aria-label="Jornada de aprendizagem QHealth Academia">
+          <div class="qh-learning-head">
+            <span class="eyebrow">Aprender · Aplicar · Evoluir</span>
+            <h3>O conhecimento só transforma quando chega à rotina.</h3>
+            <p>Três dimensões que conectam desenvolvimento profissional e prática segura.</p>
+          </div>
+          <ol class="qh-learning-list">
+            <li><span class="qh-learning-icon"><svg class="icon" aria-hidden="true"><use href="#i-school"/></svg></span><div><b>Aprendizagem com propósito</b><p>Conteúdos e trilhas alinhados às necessidades dos profissionais e dos serviços de saúde.</p></div></li>
+            <li><span class="qh-learning-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span><div><b>Aplicação no dia a dia</b><p>Conhecimento orientado às rotinas assistenciais, à liderança e à segurança do paciente.</p></div></li>
+            <li><span class="qh-learning-icon"><svg class="icon" aria-hidden="true"><use href="#i-filecheck"/></svg></span><div><b>Evidências de desenvolvimento</b><p>Participação, ciência, presença e certificação integradas ao processo de capacitação.</p></div></li>
+          </ol>
+          <div class="qh-learning-foot">Gente preparada. Processos mais seguros. Qualidade fortalecida.</div>
+        </div>
+      </div>
+    </section>
 
     <div class="principles"><div class="container"><div class="principle"><b>Feito para o contexto da saúde</b><p>Uma comunicação que entende as rotinas e os desafios das instituições assistenciais.</p></div><div class="principle"><b>Rastreabilidade como princípio</b><p>Mais clareza sobre decisões, atividades, documentos e evidências.</p></div><div class="principle"><b>Gestão conectada</b><p>Menos isolamento entre pessoas, processos, governança e melhoria.</p></div><div class="principle"><b>Qualidade como cultura</b><p>Tecnologia e desenvolvimento profissional caminhando juntos.</p></div></div></div>
 
@@ -406,6 +534,11 @@
     filters.forEach(button=>button.addEventListener('click',()=>{active=button.dataset.filter;renderFeatures()}));
     renderFeatures();
     const dialog=document.getElementById('contact-dialog');document.getElementById('open-contact')?.addEventListener('click',()=>dialog.showModal());document.getElementById('close-contact')?.addEventListener('click',()=>dialog.close());dialog?.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+    document.querySelectorAll('[data-qh-interest]').forEach(button=>button.addEventListener('click',()=>{
+      const select=document.getElementById('contact-interest');
+      if(select)select.value=button.dataset.qhInterest;
+      dialog?.showModal();
+    }));
     document.getElementById('contact-form')?.addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('contact-name').value.trim(),inst=document.getElementById('contact-organization').value.trim(),int=document.getElementById('contact-interest').value;const subject='Contato pelo site QHealth — '+int;const body=`Olá, equipe QHealth!\n\nGostaria de saber mais sobre: ${int}\n\nNome: ${name}\nInstituição: ${inst}\n\nAtenciosamente,\n${name}`;const url='mailto:danielfernando@qhealth.com.br?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);document.getElementById('form-status').textContent='Seu aplicativo de e-mail será aberto. Para concluir o contato, envie a mensagem nele. Caso não abra, escreva para danielfernando@qhealth.com.br.';window.location.href=url});
   })();
   </script>
