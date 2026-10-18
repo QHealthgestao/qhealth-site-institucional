@@ -261,15 +261,32 @@
   }
   /* proof / contact */
   .principles{background:#f3f8f9;padding:56px 0}.principles .container{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}.principle{border-left:2px solid #35c5ad;padding-left:19px}.principle b{display:block;font-size:13px;margin-bottom:6px}.principle p{font-size:12px;line-height:1.65;margin:0;color:#687d87}
-  .contact{position:relative;overflow:hidden;background:#061b26;padding:clamp(45px,6svh,76px) 0;color:white}.contact:before{content:'';position:absolute;width:440px;height:440px;border:1px solid rgba(64,213,174,.15);border-radius:50%;right:-100px;top:-260px;box-shadow:0 0 0 80px rgba(38,182,168,.025),0 0 0 165px rgba(38,182,168,.025)}
-  .contact-layout{display:grid;grid-template-columns:1fr auto;align-items:center;gap:32px;position:relative}.contact .eyebrow{color:#65d6b1}.contact h2{font:800 clamp(2rem,3.3vw,3.5rem)/1.13 Manrope,Arial,sans-serif;letter-spacing:-.06em;margin:20px 0 12px;max-width:750px}.contact p{color:#a9c7ce;line-height:1.8;font-size:14px;max-width:680px;margin:0}.contact-actions{display:flex;gap:11px;flex-wrap:wrap}
-  footer{background:#04151e;color:#bbd0d5;padding:38px 0 24px}footer .container{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}.footer-links{display:flex;gap:18px;justify-content:flex-end;flex-wrap:wrap;font-size:11px;font-weight:700}.footnote{font-size:10px;color:#7c9ca5;line-height:1.6}.footnote a{color:#75cbb4}
+  .final-screen{display:flex;flex-direction:column;min-height:calc(100svh - 75px);background:#061b26}
+  .contact{position:relative;overflow:hidden;flex:1;display:flex;align-items:center;background:radial-gradient(ellipse 55% 90% at 100% 0%,rgba(23,156,145,.14),transparent 75%),#061b26;padding:clamp(38px,5svh,68px) 0;color:white}
+  .contact>.container{width:min(1510px,calc(100% - 64px))}
+  .contact:before{content:'';position:absolute;width:440px;height:440px;border:1px solid rgba(64,213,174,.15);border-radius:50%;right:-100px;top:-260px;box-shadow:0 0 0 80px rgba(38,182,168,.025),0 0 0 165px rgba(38,182,168,.025)}
+  .contact-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,.6fr);align-items:center;gap:clamp(26px,4vw,80px);position:relative}
+  .contact .eyebrow{color:#65d6b1}
+  .contact h2{font:800 clamp(2.7rem,4.15vw,4.5rem)/1.1 Manrope,Arial,sans-serif;letter-spacing:-.06em;margin:20px 0 20px;max-width:880px}
+  .contact p{color:#b1d2d9;line-height:1.72;font-size:clamp(14px,1.04vw,17px);max-width:790px;margin:0}
+  .contact-actions{display:flex;gap:12px;justify-content:flex-start;align-items:flex-start;flex-wrap:wrap}
+  .contact-actions .btn{padding:16px 21px}
+  .final-screen footer{flex:none;background:#04151e;color:#bbd0d5;padding:26px 0;border-top:1px solid rgba(113,213,202,.13)}
+  .final-screen footer .container{width:min(1510px,calc(100% - 64px));display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}
+  .footer-social{display:flex;align-items:center;gap:13px;justify-content:flex-end;flex-wrap:wrap}
+  .footer-social-link,.footer-social-pending{width:47px;height:47px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(113,218,200,.27);border-radius:13px;background:rgba(255,255,255,.04);color:#c2e7e4;transition:border-color .2s,color .2s,background .2s,transform .2s}
+  .footer-social-link:hover{border-color:#38d0b0;color:#54e1c0;background:rgba(50,211,175,.12);transform:translateY(-2px)}
+  .footer-social-link:focus-visible{outline:3px solid #2ccbac;outline-offset:3px}
+  .footer-social-pending{color:#7899a2;opacity:.7;cursor:default}
+  .footer-social-link .icon,.footer-social-pending .icon{width:24px;height:24px}
+  .footnote{font-size:11px;color:#8caab1;line-height:1.65;margin:7px 0 0}
+  .footnote a{color:#75cbb4}
   /* prototype modal */
   dialog{max-width:min(500px,calc(100vw - 32px));border:1px solid #d6e9e8;background:#fff;border-radius:15px;padding:29px;box-shadow:0 20px 70px rgba(0,0,0,.32);color:#132e3a}dialog::backdrop{background:rgba(2,16,24,.7);backdrop-filter:blur(3px)}dialog h2{font:800 22px Manrope,sans-serif;letter-spacing:-.04em;margin:0 0 9px}dialog p{font-size:13px;line-height:1.65;color:#607886}dialog .close-modal{position:absolute;right:13px;top:11px;border:0;background:#eaf4f2;border-radius:8px;width:31px;height:31px;color:#153e43;display:grid;place-items:center}dialog .field{display:grid;gap:5px;margin-top:13px}dialog label{font-size:11px;font-weight:800}dialog input,dialog textarea{border:1px solid #c9dfe1;border-radius:8px;padding:12px;width:100%;outline:none;font-size:13px}dialog input:focus,dialog textarea:focus{border-color:#2bbf9a;box-shadow:0 0 0 3px rgba(43,191,154,.1)}.modal-note{font-size:11px;color:#607d84;background:#eff7f6;padding:10px 12px;border-radius:7px;line-height:1.5;margin:13px 0}
   @media(max-width:900px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.capabilities{display:block;min-height:auto}.cap-top{display:block}.cap-top .section-lead{max-width:650px;margin-top:14px}}
   @media(max-width:1050px){.menu{gap:15px}.hero-inner{grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);gap:32px}.float-card.one{right:-5px}.mock-body{grid-template-columns:95px 1fr}.stat-grid{gap:5px}.stat{padding:9px 7px}.focus-layout{gap:36px}.pillars{padding:24px}}
-  @media(max-width:850px){.ecosystem,.focus,.software-section{display:block;min-height:0}.menu{position:absolute;top:75px;left:0;right:0;background:#09232e;border-bottom:1px solid rgba(255,255,255,.15);padding:18px 26px;flex-direction:column;align-items:stretch;gap:18px;display:none}.menu.open{display:flex}.menu-toggle{display:flex}.intro-viewport{display:block;min-height:auto}.hero{display:block;min-height:auto;padding:133px 0 65px}.hero-inner{grid-template-columns:1fr;gap:35px}.hero h1{max-width:760px}.showcase{max-width:610px;margin:0 auto;width:100%}.ecosystem-top,.cap-top{display:block}.ecosystem .section-lead{max-width:600px}.pillar-grid{grid-template-columns:1fr 1fr}.pillar:last-child{grid-column:1/-1;min-height:280px}.focus-layout{grid-template-columns:1fr}.governance-window{max-width:700px}.principles .container{grid-template-columns:repeat(2,1fr)} .contact-layout{grid-template-columns:1fr}}
-  @media(max-width:600px){.container{width:calc(100% - 34px)}.section{padding:54px 0}.hero{padding:125px 0 62px;min-height:auto}.hero h1{font-size:clamp(2.45rem,10.9vw,3.5rem)}.hero-sub{font-size:14px}.hero-actions{flex-direction:column;align-items:stretch}.hero-proof{margin-top:26px}.showcase{padding:18px 4px 10px}.app-preview{transform:none}.mock-body{grid-template-columns:75px 1fr;min-height:280px}.mock-sidebar{padding:10px 5px}.mock-logo{font-size:10px;margin:0 3px 15px}.side-item{padding:8px 4px;font-size:7px;gap:4px}.side-item .icon{width:10px;height:10px}.mock-main{padding:13px 9px}.mock-heading{font-size:14px}.mock-small{font-size:8px}.stat-grid{gap:3px}.stat{padding:8px 4px}.stat b{font-size:8px}.stat p{font-size:6px}.activity{gap:4px}.mock-card{padding:8px}.mock-card h4{font-size:8px}.activity-row{gap:4px}.activity-row .mini-circle{width:16px;height:16px}.activity-row b{font-size:7px}.activity-row em{font-size:6px}.float-card{font-size:9px;padding:8px}.float-card.one{right:0;top:-5px}.float-card.two{bottom:-12px;left:0}.float-card small{font-size:7px}.ticker .container{justify-content:start;gap:12px 24px}.ticker span{font-size:11px}.pillar-grid,.feature-grid{grid-template-columns:1fr}.pillar,.pillar:last-child{grid-column:auto;min-height:295px}.pillar-number{margin-bottom:0}.capabilities>.container{width:calc(100% - 34px)}.filters{gap:8px}.filter{padding:10px 15px;font-size:12px}.feature{min-height:225px;padding:20px}.feature .glyph{margin-bottom:14px}.section-title{font-size:clamp(2rem,8vw,2.8rem)}.feature{min-height:175px}.governance-window{padding:12px}.gov-row{gap:3px}.gov-row div{padding:8px 5px}.gov-row b{font-size:9px}.gov-row span{font-size:8px}.principles .container{grid-template-columns:1fr 1fr;gap:20px}.principle{padding-left:12px}.contact{padding:76px 0}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions .btn{justify-content:center}footer .container{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.brand{font-size:23px}}
+  @media(max-width:850px){.ecosystem,.focus,.software-section{display:block;min-height:0}.menu{position:absolute;top:75px;left:0;right:0;background:#09232e;border-bottom:1px solid rgba(255,255,255,.15);padding:18px 26px;flex-direction:column;align-items:stretch;gap:18px;display:none}.menu.open{display:flex}.menu-toggle{display:flex}.intro-viewport{display:block;min-height:auto}.hero{display:block;min-height:auto;padding:133px 0 65px}.hero-inner{grid-template-columns:1fr;gap:35px}.hero h1{max-width:760px}.showcase{max-width:610px;margin:0 auto;width:100%}.ecosystem-top,.cap-top{display:block}.ecosystem .section-lead{max-width:600px}.pillar-grid{grid-template-columns:1fr 1fr}.pillar:last-child{grid-column:1/-1;min-height:280px}.focus-layout{grid-template-columns:1fr}.governance-window{max-width:700px}.principles .container{grid-template-columns:repeat(2,1fr)} .contact-layout{grid-template-columns:1fr}.contact-actions{justify-content:flex-start}}
+  @media(max-width:600px){.container{width:calc(100% - 34px)}.section{padding:54px 0}.hero{padding:125px 0 62px;min-height:auto}.hero h1{font-size:clamp(2.45rem,10.9vw,3.5rem)}.hero-sub{font-size:14px}.hero-actions{flex-direction:column;align-items:stretch}.hero-proof{margin-top:26px}.showcase{padding:18px 4px 10px}.app-preview{transform:none}.mock-body{grid-template-columns:75px 1fr;min-height:280px}.mock-sidebar{padding:10px 5px}.mock-logo{font-size:10px;margin:0 3px 15px}.side-item{padding:8px 4px;font-size:7px;gap:4px}.side-item .icon{width:10px;height:10px}.mock-main{padding:13px 9px}.mock-heading{font-size:14px}.mock-small{font-size:8px}.stat-grid{gap:3px}.stat{padding:8px 4px}.stat b{font-size:8px}.stat p{font-size:6px}.activity{gap:4px}.mock-card{padding:8px}.mock-card h4{font-size:8px}.activity-row{gap:4px}.activity-row .mini-circle{width:16px;height:16px}.activity-row b{font-size:7px}.activity-row em{font-size:6px}.float-card{font-size:9px;padding:8px}.float-card.one{right:0;top:-5px}.float-card.two{bottom:-12px;left:0}.float-card small{font-size:7px}.ticker .container{justify-content:start;gap:12px 24px}.ticker span{font-size:11px}.pillar-grid,.feature-grid{grid-template-columns:1fr}.pillar,.pillar:last-child{grid-column:auto;min-height:295px}.pillar-number{margin-bottom:0}.capabilities>.container{width:calc(100% - 34px)}.filters{gap:8px}.filter{padding:10px 15px;font-size:12px}.feature{min-height:225px;padding:20px}.feature .glyph{margin-bottom:14px}.section-title{font-size:clamp(2rem,8vw,2.8rem)}.feature{min-height:175px}.governance-window{padding:12px}.gov-row{gap:3px}.gov-row div{padding:8px 5px}.gov-row b{font-size:9px}.gov-row span{font-size:8px}.principles .container{grid-template-columns:1fr 1fr;gap:20px}.principle{padding-left:12px}.final-screen{min-height:calc(100svh - 75px)}.contact{padding:55px 0}.contact>.container,.final-screen footer .container{width:calc(100% - 34px)}.contact h2{font-size:clamp(2.3rem,9vw,3.25rem)}.footer-social{justify-content:flex-start}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions .btn{justify-content:center}.final-screen footer .container{grid-template-columns:1fr}.footer-social{justify-content:flex-start}.brand{font-size:23px}}
   @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
   /* Identidade institucional e imagem real integradas diretamente no layout. */
@@ -316,6 +333,10 @@
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
     <symbol id="i-lightning" viewBox="0 0 24 24"><path d="m13 2-9 11h7l-1 9 10-12h-7l0-8Z"/></symbol>
     <symbol id="i-message" viewBox="0 0 24 24"><path d="M20 16a3 3 0 0 1-3 3H8l-5 3V6a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3v10Z"/></symbol>
+    <symbol id="i-social-linkedin" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="3.5"/><path d="M7 10v7M7 7v.1M11 17v-7m0 3.2c0-2 1.2-3.2 3.1-3.2 2 0 3 1.2 3 3.4V17"/></symbol>
+    <symbol id="i-social-instagram" viewBox="0 0 24 24"><rect x="2.8" y="2.8" width="18.4" height="18.4" rx="5"/><circle cx="12" cy="12" r="4.1"/><path d="M17.2 6.8h.01"/></symbol>
+    <symbol id="i-social-whatsapp" viewBox="0 0 24 24"><path d="M20.6 11.6a8.6 8.6 0 0 1-12.7 7.5L3 20.6l1.5-4.8a8.6 8.6 0 1 1 16.1-4.2Z"/><path d="M8.3 8.2c-.7 1.8 1.4 5.3 3.4 6.7 1.2.8 2.7 1.5 4.1 1.1l.8-1.1-2.4-1.3-.9 1c-1.6-.8-2.8-1.9-3.5-3.5l.9-.8-1.4-2.4Z"/></symbol>
+    <symbol id="i-social-facebook" viewBox="0 0 24 24"><path d="M15.2 21v-8.5h3l.5-3.7h-3.5V6.5c0-1.1.5-1.8 2-1.8H19V1.5a22 22 0 0 0-2.8-.2c-3.1 0-4.9 1.9-4.9 5.1v2.4H8v3.7h3.3V21"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6C8 3 5 3 2 4v15c4-1 7 0 10 2 3-2 6-3 10-2V4c-3-1-6-1-10 2ZM12 6v15"/></symbol>
   </svg>
 
@@ -428,7 +449,7 @@
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Evidências organizadas</li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Qualidade e segurança</li>
             </ul>
-            <button class="qh-service-cta" type="button" data-qh-interest="QHealth Software">Conversar sobre o Software <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <a class="qh-service-cta" href="#contato" data-qh-interest="QHealth Software">Conversar sobre o Software <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <figure class="software-demo">
             <div class="software-frame">
@@ -460,7 +481,7 @@
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Preparação para acreditações e auditorias</li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Indicadores e melhoria contínua</li>
           </ul>
-          <button class="qh-service-cta" type="button" data-qh-interest="QHealth Consultoria">Conversar sobre Consultoria <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <a class="qh-service-cta" href="#contato" data-qh-interest="QHealth Consultoria">Conversar sobre Consultoria <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
         <div class="qh-method" aria-label="Método de atuação da QHealth Consultoria">
           <p class="qh-method-label">Da estratégia à execução</p>
@@ -488,7 +509,7 @@
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Capacitação para a rotina assistencial</li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Registros, ciência e certificados</li>
           </ul>
-          <button class="qh-service-cta" type="button" data-qh-interest="QHealth Academia">Conhecer a QHealth Academia <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <a class="qh-service-cta" href="#contato" data-qh-interest="QHealth Academia">Conhecer a QHealth Academia <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
         <div class="qh-learning" aria-label="Jornada de aprendizagem QHealth Academia">
           <div class="qh-learning-head">
@@ -508,9 +529,36 @@
 
     <div class="principles"><div class="container"><div class="principle"><b>Feito para o contexto da saúde</b><p>Uma comunicação que entende as rotinas e os desafios das instituições assistenciais.</p></div><div class="principle"><b>Rastreabilidade como princípio</b><p>Mais clareza sobre decisões, atividades, documentos e evidências.</p></div><div class="principle"><b>Gestão conectada</b><p>Menos isolamento entre pessoas, processos, governança e melhoria.</p></div><div class="principle"><b>Qualidade como cultura</b><p>Tecnologia e desenvolvimento profissional caminhando juntos.</p></div></div></div>
 
-    <section class="contact" id="contato"><div class="container contact-layout"><div><span class="eyebrow">Vamos construir uma gestão melhor?</span><h2>O próximo avanço da sua instituição <span class="gradient-text">começa com uma conversa.</span></h2><p>Conheça o ecossistema QHealth e descubra como software, consultoria e educação podem apoiar o fortalecimento da qualidade e da segurança do paciente.</p></div><div class="contact-actions"><button class="btn btn-primary" id="open-contact">Solicitar apresentação <svg class="icon"><use href="#i-arrow"/></svg></button><a class="btn btn-secondary" href="#inicio">Voltar ao início</a></div></div></section>
   </main>
-  <footer><div class="container"><div><a href="#inicio" class="brand brand-oficial brand-oficial-footer" aria-label="QHealth, voltar ao início"><img src="qhealth-logo-oficial.webp" alt="QHealth — Gestão da Qualidade em Saúde" width="900" height="300" loading="lazy" decoding="async"></a><p class="footnote">Gestão inteligente. Saúde mais segura.<br>© 2026 QHealth • Todos os direitos reservados.</p></div><div class="footer-links"><a href="#ecossistema">Ecossistema</a><a href="#diferenciais">Diferenciais</a><a href="#software">Software</a><a href="#consultoria">Consultoria</a><a href="#academia">Academia</a></div></div></footer>
+  <div class="final-screen" id="contato">
+    <section class="contact" aria-labelledby="contato-heading">
+      <div class="container contact-layout">
+        <div>
+          <span class="eyebrow">Vamos construir uma gestão melhor?</span>
+          <h2 id="contato-heading">O próximo avanço da sua instituição <span class="gradient-text">começa com uma conversa.</span></h2>
+          <p>Conheça o ecossistema QHealth e descubra como software, consultoria e educação podem apoiar o fortalecimento da qualidade e da segurança do paciente.</p>
+        </div>
+        <div class="contact-actions">
+          <button class="btn btn-primary" type="button" id="open-contact">Solicitar apresentação <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <a class="btn btn-secondary" href="#inicio">Voltar ao início</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div>
+          <a href="#inicio" class="brand brand-oficial brand-oficial-footer" aria-label="QHealth, voltar ao início"><img src="qhealth-logo-oficial.webp" alt="QHealth — Gestão da Qualidade em Saúde" width="900" height="300" loading="lazy" decoding="async"></a>
+          <p class="footnote">Gestão inteligente. Saúde mais segura.<br>© 2026 QHealth • Todos os direitos reservados.</p>
+        </div>
+        <nav class="footer-social" aria-label="QHealth nas redes sociais">
+          <a class="footer-social-link" href="https://pt.linkedin.com/posts/qhealthgest%C3%A3o_qhealth-gest%C3%A3odaqualidade-qualidadeemsa%C3%BAde-activity-7503219928016076800-IQuk" target="_blank" rel="noopener noreferrer" aria-label="Ver publicação da QHealth no LinkedIn" title="QHealth no LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-social-linkedin"/></svg></a>
+          <span class="footer-social-pending" role="img" aria-label="Instagram da QHealth: perfil ainda não informado" title="Instagram: aguardando link oficial"><svg class="icon" aria-hidden="true"><use href="#i-social-instagram"/></svg></span>
+          <span class="footer-social-pending" role="img" aria-label="WhatsApp da QHealth: número ainda não informado" title="WhatsApp: aguardando número institucional"><svg class="icon" aria-hidden="true"><use href="#i-social-whatsapp"/></svg></span>
+          <span class="footer-social-pending" role="img" aria-label="Facebook da QHealth: perfil ainda não informado" title="Facebook: aguardando link oficial"><svg class="icon" aria-hidden="true"><use href="#i-social-facebook"/></svg></span>
+        </nav>
+      </div>
+    </footer>
+  </div>
 
   <dialog id="contact-dialog" aria-labelledby="modal-title"><button class="close-modal" type="button" id="close-contact" aria-label="Fechar"><svg class="icon"><path d="M5 5l14 14M19 5L5 19"/></svg></button><h2 id="modal-title">Conheça a QHealth</h2><p>Conte um pouco sobre sua instituição e prepare um e-mail para nossa equipe.</p><form id="contact-form"><div class="field"><label for="contact-name">Nome</label><input id="contact-name" name="nome" autocomplete="name" required maxlength="90" placeholder="Seu nome"></div><div class="field"><label for="contact-organization">Instituição</label><input id="contact-organization" name="instituicao" required maxlength="120" placeholder="Nome da instituição"></div><div class="field"><label for="contact-interest">Interesse</label><select id="contact-interest" name="interesse" style="border:1px solid #c9dfe1;border-radius:8px;padding:12px;width:100%"><option>Conhecer o ecossistema QHealth</option><option>QHealth Software</option><option>QHealth Consultoria</option><option>QHealth Academia</option></select></div><div class="modal-note" role="status" id="form-status">Ao continuar, seu aplicativo de e-mail será aberto com as informações preenchidas. O site não envia nem armazena os dados.</div><button class="btn btn-primary" type="submit" style="width:100%">Preparar e-mail de contato <svg class="icon"><use href="#i-arrow"/></svg></button></form></dialog>
   <script>
@@ -527,10 +575,9 @@
     filters.forEach(button=>button.addEventListener('click',()=>{active=button.dataset.filter;renderFeatures()}));
     renderFeatures();
     const dialog=document.getElementById('contact-dialog');document.getElementById('open-contact')?.addEventListener('click',()=>dialog.showModal());document.getElementById('close-contact')?.addEventListener('click',()=>dialog.close());dialog?.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
-    document.querySelectorAll('[data-qh-interest]').forEach(button=>button.addEventListener('click',()=>{
+    document.querySelectorAll('a[data-qh-interest]').forEach(link=>link.addEventListener('click',()=>{
       const select=document.getElementById('contact-interest');
-      if(select)select.value=button.dataset.qhInterest;
-      dialog?.showModal();
+      if(select)select.value=link.dataset.qhInterest;
     }));
     document.getElementById('contact-form')?.addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('contact-name').value.trim(),inst=document.getElementById('contact-organization').value.trim(),int=document.getElementById('contact-interest').value;const subject='Contato pelo site QHealth — '+int;const body=`Olá, equipe QHealth!\n\nGostaria de saber mais sobre: ${int}\n\nNome: ${name}\nInstituição: ${inst}\n\nAtenciosamente,\n${name}`;const url='mailto:danielfernando@qhealth.com.br?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);document.getElementById('form-status').textContent='Seu aplicativo de e-mail será aberto. Para concluir o contato, envie a mensagem nele. Caso não abra, escreva para danielfernando@qhealth.com.br.';window.location.href=url});
   })();
