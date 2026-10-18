@@ -197,11 +197,13 @@
   .qh-method-label{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#82dec9;margin:0 0 8px}
   .qh-method h3{font:800 clamp(21px,1.95vw,29px)/1.22 Manrope,Arial,sans-serif;letter-spacing:-.05em;color:white;margin:0 0 23px}
   .qh-method-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-  .qh-method-step{border:1px solid rgba(129,224,216,.23);border-radius:14px;padding:clamp(17px,1.6vw,23px);min-height:164px;background:rgba(9,54,65,.64);display:flex;flex-direction:column}
-  .qh-method-number{display:flex;align-items:center;justify-content:space-between;color:#65d9bb;font:800 12px Manrope,Arial,sans-serif;letter-spacing:.12em}
-  .qh-method-number .icon{width:23px;height:23px}
-  .qh-method-step h4{font:800 17px Manrope,Arial,sans-serif;letter-spacing:-.035em;color:#f5ffff;margin:16px 0 7px}
-  .qh-method-step p{font-size:12px;line-height:1.55;color:#b2cdd0;margin:0}
+  .qh-method-step{border:1px solid rgba(129,224,216,.23);border-radius:14px;padding:clamp(17px,1.6vw,23px);min-height:180px;background:rgba(9,54,65,.64);display:flex;flex-direction:column}
+  .qh-method-step-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:17px}
+  .qh-method-step-title{display:flex;align-items:center;flex-wrap:wrap;gap:10px;min-width:0}
+  .qh-method-number{color:#65d9bb;font:800 12px Manrope,Arial,sans-serif;letter-spacing:.08em;flex:none}
+  .qh-method-step-head>.icon{width:22px;height:22px;color:#65d9bb;flex:none}
+  .qh-method-step h4{font:800 clamp(15px,1.1vw,17px)/1.3 Manrope,Arial,sans-serif;letter-spacing:-.035em;color:#f5ffff;margin:0}
+  .qh-method-step p{font-size:clamp(12px,.88vw,13px);line-height:1.6;color:#bed6d9;margin:0}
   .qh-method-foot{display:flex;align-items:center;gap:10px;margin-top:19px;color:#97cfce;font-size:11px;font-weight:700}
   .qh-method-foot .icon{color:#5addb5;width:17px;height:17px}
   .qh-academia{background:radial-gradient(ellipse 60% 90% at 98% 40%,rgba(50,200,151,.13),transparent 77%),linear-gradient(135deg,#f6fcf9,#eaf7f5 58%,#eff7fd);color:#103043}
@@ -438,7 +440,7 @@
         <div class="qh-service-message">
           <span class="eyebrow">QHealth Consultoria · Estratégia e Execução</span>
           <h2 id="consultoria-heading">Qualidade não se improvisa. <span class="gradient-text">Se constrói com método.</span></h2>
-          <p class="qh-service-lead">Da análise de maturidade à preparação para acreditações, ajudamos sua instituição a transformar requisitos em processos claros, equipes alinhadas e melhoria contínua. Estratégia que sai do papel e se transforma em prática.</p>
+          <p class="qh-service-lead">Qualidade e segurança não avançam com ações isoladas. A QHealth Consultoria transforma desafios institucionais em planos consistentes: avalia a maturidade da gestão, estrutura processos, fortalece a gestão de riscos e apoia a preparação para auditorias e acreditações. Cada etapa respeita a realidade do serviço, envolve as equipes e conecta decisões a evidências, responsabilidades e resultados acompanháveis.</p>
           <ul class="qh-service-benefits">
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Diagnóstico e maturidade institucional</li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Gestão de riscos e processos</li>
@@ -451,10 +453,10 @@
           <p class="qh-method-label">Da estratégia à execução</p>
           <h3>Uma jornada estruturada para resultados sustentáveis.</h3>
           <div class="qh-method-grid">
-            <article class="qh-method-step"><div class="qh-method-number">01 <svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></div><h4>Diagnosticar</h4><p>Compreender o cenário, os riscos e as oportunidades de evolução.</p></article>
-            <article class="qh-method-step"><div class="qh-method-number">02 <svg class="icon" aria-hidden="true"><use href="#i-branch"/></svg></div><h4>Estruturar</h4><p>Organizar processos, responsabilidades e evidências institucionais.</p></article>
-            <article class="qh-method-step"><div class="qh-method-number">03 <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div><h4>Implementar</h4><p>Transformar planos em rotinas, práticas e ações acompanháveis.</p></article>
-            <article class="qh-method-step"><div class="qh-method-number">04 <svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></div><h4>Evoluir</h4><p>Monitorar resultados e fortalecer a cultura de melhoria contínua.</p></article>
+            <article class="qh-method-step"><div class="qh-method-step-head"><div class="qh-method-step-title"><span class="qh-method-number">01</span><h4>Diagnosticar</h4></div><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></div><p>Avaliar a maturidade da gestão, identificar riscos e lacunas e definir prioridades com base em evidências e nas necessidades da instituição.</p></article>
+            <article class="qh-method-step"><div class="qh-method-step-head"><div class="qh-method-step-title"><span class="qh-method-number">02</span><h4>Estruturar</h4></div><svg class="icon" aria-hidden="true"><use href="#i-branch"/></svg></div><p>Desenhar processos, estabelecer responsabilidades e organizar documentos, indicadores e planos de ação com coerência institucional.</p></article>
+            <article class="qh-method-step"><div class="qh-method-step-head"><div class="qh-method-step-title"><span class="qh-method-number">03</span><h4>Implementar</h4></div><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div><p>Apoiar as equipes na execução das melhorias, incorporar práticas seguras às rotinas e acompanhar as ações até sua conclusão.</p></article>
+            <article class="qh-method-step"><div class="qh-method-step-head"><div class="qh-method-step-title"><span class="qh-method-number">04</span><h4>Evoluir</h4></div><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></div><p>Analisar indicadores, verificar a efetividade das ações e consolidar aprendizados para sustentar a melhoria contínua.</p></article>
           </div>
           <div class="qh-method-foot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Cada instituição tem seu contexto. Cada plano precisa fazer sentido.</div>
         </div>
