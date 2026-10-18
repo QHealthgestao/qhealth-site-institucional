@@ -142,19 +142,12 @@
   .software-frame-status{display:flex;align-items:center;gap:6px;color:#8ce6c7}
   .software-frame-status:before{content:"";width:6px;height:6px;border-radius:50%;background:#5de1ad}
   .software-frame img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;background:#061b26}
-  .software-journey{margin-top:clamp(23px,3.3svh,34px);background:rgba(4,28,39,.7);border:1px solid rgba(105,219,204,.24);border-radius:16px;padding:17px 24px}
-  .software-journey-heading{margin:0 0 11px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#82dcca;font-weight:800}
-  .software-flow{display:flex;list-style:none;padding:0;margin:0;align-items:center;gap:20px}
-  .software-flow li{display:flex;align-items:center;gap:11px;min-width:0;flex:1;position:relative;font-size:clamp(12px,1vw,15px);font-weight:800;white-space:nowrap}
-  .software-flow li:not(:last-child):after{content:"→";position:absolute;right:-14px;color:#5ecab6;font-size:19px;font-weight:400}
-  .software-flow .icon{width:23px;height:23px;color:#5ee0b2}
+  .software-section{min-height:calc(100svh - 75px);display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden;padding:clamp(24px,3.4svh,38px) 0;background:radial-gradient(ellipse 55% 75% at 98% 30%,rgba(17,151,141,.20),transparent 75%),radial-gradient(ellipse 45% 65% at 0% 95%,rgba(22,122,164,.19),transparent 76%),linear-gradient(140deg,#092633,#041620 67%,#092630);color:#fff}
+  .software-section .qh-service-cta{margin-top:25px;background:linear-gradient(110deg,#17b993,#43cfb9);color:#062b32}
   @media(max-width:1160px) and (min-width:901px){
     .software-stage{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px}
     .software-message h2{font-size:clamp(2rem,3.2vw,2.8rem)}
     .software-value{gap:7px 10px}
-    .software-flow{gap:15px}
-    .software-flow li{gap:6px;font-size:12px}
-    .software-flow li:not(:last-child):after{right:-11px}
   }
   @media(max-width:900px){
     .software-section{display:block;min-height:auto;padding:62px 0}
@@ -162,7 +155,6 @@
     .software-message h2{max-width:750px}
     .software-lead{max-width:680px}
     .software-demo{max-width:770px;margin-inline:auto}
-    .software-journey{margin-top:27px}
   }
   @media(max-width:600px){
     .software-section{padding:50px 0}
@@ -173,12 +165,7 @@
     .software-frame{padding:4px;border-radius:12px}
     .software-frame-head{height:23px;font-size:7px;padding:0 5px 3px}
     
-    .software-journey{padding:18px}
-    .software-flow{flex-wrap:wrap;gap:15px 8px}
-    .software-flow li{flex:none;width:calc(50% - 4px);white-space:normal;font-size:12px;gap:8px}
-    .software-flow li:not(:last-child):after{content:none}
   }
-  .software-section{min-height:calc(100svh - 82px);display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden;padding:clamp(27px,3.6svh,44px) 0;background:radial-gradient(ellipse 55% 75% at 98% 30%,rgba(17,151,141,.20),transparent 75%),radial-gradient(ellipse 45% 65% at 0% 95%,rgba(22,122,164,.19),transparent 76%),linear-gradient(140deg,#092633,#041620 67%,#092630);color:#fff}
   /* Focus */
   .focus{background:#fff;min-height:calc(100svh - 90px);display:flex;align-items:center}.focus-layout{display:grid;grid-template-columns:.84fr 1.16fr;gap:80px;align-items:center}.focus .section-title{font-size:clamp(2rem,3vw,3rem)}.focus-list{margin-top:30px;display:grid;gap:16px}.focus-list-item{display:flex;gap:14px;align-items:flex-start}.focus-list-item .mark{background:#e7f9f3;color:#069e80;border-radius:9px;padding:9px;display:grid;place-items:center}.focus-list-item b{display:block;font-size:13px;margin:1px 0 5px}.focus-list-item p{font-size:12px;color:#677f89;line-height:1.6;margin:0}
   .governance-window{background:#f6fafb;border:1px solid #dfeaec;border-radius:16px;padding:21px;box-shadow:var(--shadow);position:relative}.gov-heading{display:flex;align-items:center;justify-content:space-between;padding:0 0 16px;border-bottom:1px solid #e2eded}.gov-heading b{font-size:14px;letter-spacing:-.03em}.pill{font-size:10px;background:#e3f8f0;color:#00896d;padding:7px 9px;border-radius:20px;font-weight:800}.gov-group{background:white;border:1px solid #e0ebec;margin-top:11px;border-radius:9px;padding:15px}.gov-itemtop{display:flex;align-items:center;justify-content:space-between;gap:10px}.gov-group strong{font-size:12px}.gov-meta{font-size:10px;color:#8b9da5;margin-top:4px}.gov-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.gov-row div{background:#eff8f8;padding:10px 9px;border-radius:7px}.gov-row b{font-size:11px;display:block}.gov-row span{font-size:9px;color:#76909a;display:block;margin-top:3px}.gov-status{color:#108c70;font-size:10px;font-weight:800}
@@ -426,6 +413,7 @@
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Evidências organizadas</li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Qualidade e segurança</li>
             </ul>
+            <button class="qh-service-cta" type="button" data-qh-interest="QHealth Software">Conversar sobre o Software <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
           </div>
           <figure class="software-demo">
             <div class="software-frame">
@@ -438,16 +426,9 @@
             </div>
           </figure>
         </div>
-        <div class="software-journey" aria-label="Etapas conectadas da melhoria contínua">
-          <p class="software-journey-heading">Da ocorrência ao resultado · Uma jornada conectada</p>
-          <ol class="software-flow">
-            <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg>Notificar</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-risk"/></svg>Investigar</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>Agir</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Verificar</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>Evoluir</li>
-          </ol>
-        </div>
+      </div>
+    </section>
+
       </div>
     </section>
 
