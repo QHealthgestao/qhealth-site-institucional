@@ -42,6 +42,8 @@
   .logo svg{width:22px;height:22px;transform:rotate(9deg);stroke-width:2.3}
   .menu{display:flex;align-items:center;gap:27px;color:#d4e2e7;font-size:12px;font-weight:700}
   .menu a:hover{color:#5fe3bd}
+  .menu .ecosystem-link{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+  .menu .ecosystem-link .icon{width:15px;height:15px;color:#63debc;flex:none}
   .nav-cta{padding:11px 16px;font-size:12px}
   .menu-toggle{display:none;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;border-radius:9px;width:42px;height:42px;align-items:center;justify-content:center}
   /* Primeira dobra: apresentação e faixa institucional ajustadas à altura disponível. */
@@ -321,7 +323,7 @@
     <div class="container">
       <a href="#inicio" class="brand brand-oficial" aria-label="QHealth, voltar ao início"><img src="qhealth-logo-oficial.webp" alt="QHealth — Gestão da Qualidade em Saúde" width="900" height="300" decoding="async" fetchpriority="high"></a>
       <nav class="menu" id="site-menu" aria-label="Navegação principal">
-        <a href="#ecossistema">Ecossistema</a><a href="#diferenciais">Diferenciais</a><a href="#software">Software</a><a href="#consultoria">Consultoria</a><a href="#academia">Academia</a>
+        <a href="#ecossistema" class="ecosystem-link"><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg>Ecossistema</a><a href="#diferenciais">Diferenciais</a><a href="#software">Software</a><a href="#consultoria">Consultoria</a><a href="#academia">Academia</a>
         <a href="#contato" class="btn btn-primary nav-cta">Falar com a QHealth <svg class="icon" width="15" height="15"><use href="#i-arrow"/></svg></a>
       </nav>
       <button class="menu-toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Abrir menu"><svg class="icon icon-lg"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
@@ -337,7 +339,7 @@
           <div class="eyebrow">Tecnologia • Consultoria • Educação em Saúde</div>
           <h1>Gestão da qualidade que <span class="gradient-text">conecta pessoas, processos e decisões.</span></h1>
           <p class="hero-sub">Uma nova forma de fortalecer a segurança do paciente e a excelência institucional. Do documento à evidência, da reunião à ação, do treinamento ao resultado.</p>
-          <div class="hero-actions"><a href="#diferenciais" class="btn btn-primary">Explore os diferenciais <svg class="icon"><use href="#i-arrow"/></svg></a><a href="#ecossistema" class="btn btn-secondary">Conheça o ecossistema</a></div>
+          <div class="hero-actions"><a href="#diferenciais" class="btn btn-primary">Explore os diferenciais <svg class="icon"><use href="#i-arrow"/></svg></a><a href="#ecossistema" class="btn btn-secondary">Conheça o ecossistema <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
           <div class="hero-proof"><b><svg class="icon"><use href="#i-check"/></svg> Governança integrada</b><b><svg class="icon"><use href="#i-check"/></svg> Rastreabilidade</b><b><svg class="icon"><use href="#i-check"/></svg> Foco na saúde</b></div>
         </div>
         <figure class="software-preview" aria-label="Tela real do QHealth Software — Gestão de Riscos">
