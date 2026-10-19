@@ -312,7 +312,7 @@
   .brand-oficial-footer img{width:168px;max-height:64px}
   .software-preview{min-width:0;max-width:100%;width:100%;margin:0;position:relative}
   .software-preview-window{border:1px solid rgba(93,218,204,.42);border-radius:17px;background:#071e2a;box-shadow:0 22px 65px rgba(0,0,0,.35),0 0 0 8px rgba(68,214,188,.05);padding:6px;min-width:0}
-  .software-preview-window>img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:0}
+  .software-preview-window>video{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1352 / 660;object-fit:contain;background:#071e2a;border-radius:0}
   .software-preview-topbar{height:32px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 10px 6px;color:#a2d2d3;font-size:10px;font-weight:800;letter-spacing:.09em}
   .software-preview-dots{display:flex;align-items:center;gap:5px}
   .software-preview-dots i{display:block;width:7px;height:7px;border-radius:50%;background:#7dbb9e}
@@ -380,14 +380,17 @@
           <div class="hero-actions"><a href="#diferenciais" class="btn btn-primary">Explore os diferenciais <svg class="icon"><use href="#i-arrow"/></svg></a><a href="#ecossistema" class="btn btn-secondary">Conheça o ecossistema <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
           <div class="hero-proof"><b><svg class="icon"><use href="#i-check"/></svg> Governança integrada</b><b><svg class="icon"><use href="#i-check"/></svg> Rastreabilidade</b><b><svg class="icon"><use href="#i-check"/></svg> Foco na saúde</b></div>
         </div>
-        <figure class="software-preview" aria-label="Tela real do QHealth Software — Gestão de Riscos">
+        <figure class="software-preview" aria-label="Vídeo de apresentação do QHealth Software">
           <div class="software-preview-window">
             <div class="software-preview-topbar" aria-hidden="true">
               <span class="software-preview-dots"><i></i><i></i><i></i></span>
               <span>QHEALTH SOFTWARE</span>
               <span class="software-preview-real">TELA REAL</span>
             </div>
-            <img src="qhealth-gestao-riscos.png" width="1352" height="660" alt="Interface real do QHealth Software no módulo Gestão de Riscos: menu lateral, mapa de riscos 5 por 5 e registro de riscos" decoding="async" loading="eager" fetchpriority="high">
+            <video width="1352" height="660" autoplay muted loop playsinline controls preload="metadata" aria-label="Vídeo institucional do QHealth Software">
+              <source src="qhealth-video-home.mp4" type="video/mp4">
+              Seu navegador não oferece suporte à reprodução deste vídeo.
+            </video>
           </div>
           <figcaption class="gradient-text">GESTÃO INTELIGENTE. SAÚDE MAIS SEGURA.</figcaption>
         </figure>
