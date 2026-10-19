@@ -388,7 +388,7 @@
               <span class="software-preview-real">TELA REAL</span>
             </div>
             <video id="qhealth-hero-video" width="1352" height="660" autoplay muted loop playsinline controls preload="metadata" aria-label="Vídeo institucional do QHealth Software">
-              <source src="qhealth-video-home.mp4" type="video/mp4">
+              <source src="qhealth-video-home-audio-20261019.mp4" type="video/mp4">
               Seu navegador não oferece suporte à reprodução deste vídeo.
             </video>
           </div>
@@ -600,14 +600,32 @@
     const heroVideo=document.getElementById('qhealth-hero-video');
     if(heroVideo){
       let heroVisible=true;
+      const onHome=()=>!location.hash||location.hash==='#inicio';
       const syncHeroPlayback=()=>{
-        if(document.hidden||!heroVisible){
-          heroVideo.pause();
-        }else if(heroVideo.muted){
+        if(document.hidden||!heroVisible||!onHome()){
+          if(!heroVideo.paused)heroVideo.pause();
+          return;
+        }
+        if(heroVideo.paused){
           const attempt=heroVideo.play();
           if(attempt&&typeof attempt.catch==='function')attempt.catch(()=>{});
         }
       };
+      // O autoplay inicia mudo. A primeira interação real do visitante libera
+      // o áudio sem botão adicional e sem tentar contornar a política do navegador.
+      const enableHeroSound=()=>{
+        if(document.hidden||!heroVisible||!onHome())return;
+        if(heroVideo.muted){
+          heroVideo.muted=false;
+          heroVideo.volume=1;
+        }
+        syncHeroPlayback();
+      };
+      document.addEventListener('click',enableHeroSound,{capture:true});
+      document.addEventListener('keydown',event=>{
+        if(event.key==='Tab'||event.key==='Escape')return;
+        enableHeroSound();
+      });
       if('IntersectionObserver' in window){
         const heroObserver=new IntersectionObserver(([entry])=>{
           heroVisible=Boolean(entry&&entry.isIntersecting&&entry.intersectionRatio>=0.45);
@@ -617,9 +635,7 @@
       }
       document.addEventListener('visibilitychange',syncHeroPlayback);
       window.addEventListener('pagehide',()=>heroVideo.pause());
-      window.addEventListener('hashchange',()=>{
-        if(location.hash&&location.hash!=='#inicio')heroVideo.pause();
-      });
+      window.addEventListener('hashchange',syncHeroPlayback);
     }
     const menu=document.getElementById('site-menu'),menuButton=document.querySelector('.menu-toggle');
     menuButton?.addEventListener('click',()=>{const open=menu.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')});
