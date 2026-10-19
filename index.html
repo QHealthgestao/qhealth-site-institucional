@@ -387,7 +387,7 @@
               <span>QHEALTH SOFTWARE</span>
               <span class="software-preview-real">TELA REAL</span>
             </div>
-            <video width="1352" height="660" autoplay muted loop playsinline controls preload="metadata" aria-label="Vídeo institucional do QHealth Software">
+            <video id="qhealth-hero-video" width="1352" height="660" autoplay muted loop playsinline controls preload="metadata" aria-label="Vídeo institucional do QHealth Software">
               <source src="qhealth-video-home.mp4" type="video/mp4">
               Seu navegador não oferece suporte à reprodução deste vídeo.
             </video>
@@ -595,6 +595,32 @@
   </dialog>
   <script>
   (()=>{
+    // O áudio de vídeos com reprodução automática precisa iniciar mudo por política dos navegadores.
+    // Usar os controles nativos para ativar o som; não inserir botão extra nem contornar a política.
+    const heroVideo=document.getElementById('qhealth-hero-video');
+    if(heroVideo){
+      let heroVisible=true;
+      const syncHeroPlayback=()=>{
+        if(document.hidden||!heroVisible){
+          heroVideo.pause();
+        }else if(heroVideo.muted){
+          const attempt=heroVideo.play();
+          if(attempt&&typeof attempt.catch==='function')attempt.catch(()=>{});
+        }
+      };
+      if('IntersectionObserver' in window){
+        const heroObserver=new IntersectionObserver(([entry])=>{
+          heroVisible=Boolean(entry&&entry.isIntersecting&&entry.intersectionRatio>=0.45);
+          syncHeroPlayback();
+        },{threshold:[0,0.45,0.65]});
+        heroObserver.observe(heroVideo);
+      }
+      document.addEventListener('visibilitychange',syncHeroPlayback);
+      window.addEventListener('pagehide',()=>heroVideo.pause());
+      window.addEventListener('hashchange',()=>{
+        if(location.hash&&location.hash!=='#inicio')heroVideo.pause();
+      });
+    }
     const menu=document.getElementById('site-menu'),menuButton=document.querySelector('.menu-toggle');
     menuButton?.addEventListener('click',()=>{const open=menu.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')});
     menu?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.classList.remove('open');menuButton?.setAttribute('aria-expanded','false');menuButton?.setAttribute('aria-label','Abrir menu')}));
