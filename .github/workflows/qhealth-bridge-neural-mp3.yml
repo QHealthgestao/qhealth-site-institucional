@@ -1,0 +1,21 @@
+name: QHealth transfer the final approved neural MP3
+on:
+  push:
+    branches: [temp-bridge-riscos-20261125]
+    paths: [.github/workflows/qhealth-bridge-neural-mp3.yml]
+permissions: {contents: read}
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch previously approved neural speech
+        run: |
+          curl -fsSL --retry 3 --connect-timeout 20 --max-time 160 "https://d.uguu.se/lFfNwzjGKTPQ.mp3" -o francisca.mp3
+          test $(stat -c%s francisca.mp3) -eq 9753068
+          sha256sum francisca.mp3
+      - uses: actions/upload-artifact@v4
+        with:
+          name: QHealth-Approved-Neural-MP3
+          path: francisca.mp3
+          retention-days: 1
+          compression-level: 0
